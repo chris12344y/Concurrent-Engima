@@ -176,6 +176,7 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="UploadMap.aspx" />
     <Content Include="UserControlPanel.aspx" />
     <Content Include="UserLogin.aspx" />
     <None Include="Scripts\jquery-3.6.0.intellisense.js" />
@@ -324,6 +325,13 @@
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
     </Compile>
+    <Compile Include="UploadMap.aspx.cs">
+      <DependentUpon>UploadMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UploadMap.aspx.designer.cs">
+      <DependentUpon>UploadMap.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UserControlPanel.aspx.cs">
       <DependentUpon>UserControlPanel.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -349,6 +357,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
+    <Folder Include="Maps\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

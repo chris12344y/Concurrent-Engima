@@ -37,7 +37,11 @@ namespace GroupProjectV4
 
         protected void SignOutButton_Click(object sender, EventArgs e)
         {
+            //NONE OF THIS WORKS
+            //That being said, none of this breaks anything really?
+            //Just essentially the list of things I've tried to sign out
             // Check for Authentication Cookie
+            /*
             if (Request.Cookies[FormsAuthentication.FormsCookieName] != null)
             {
                 Request.Cookies[FormsAuthentication.FormsCookieName].Expires = DateTime.Now.AddDays(-1d);
@@ -54,6 +58,7 @@ namespace GroupProjectV4
             Session.Abandon();
             
             FormsAuthentication.RedirectFromLoginPage("", false);
+            */
         }
     }
 }
