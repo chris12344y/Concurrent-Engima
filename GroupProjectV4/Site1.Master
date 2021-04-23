@@ -1,0 +1,30 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="GroupProjectV4.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="headerContent">
+        <a href="Default.aspx">Home</a>
+        <a href="UserControlPanel.aspx">Control Panel</a>
+        <asp:Label ID="Label1" runat="server" Text="User Name:"></asp:Label>
+        <asp:TextBox ID="UserNameTxtBox" runat="server" CssClass="auto-style1" Width="110px"></asp:TextBox>
+        Role:<asp:TextBox ID="RoleTxtBox" runat="server"></asp:TextBox>
+        <br />
+    </div>
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+        <p>
+            &nbsp;</p>
+    </form>
+</body>
+</html>
