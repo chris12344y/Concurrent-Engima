@@ -19,10 +19,7 @@ namespace GroupProjectV4
 				ticket = FormsAuthentication.Decrypt(Request.Cookies[FormsAuthentication.FormsCookieName].Value);
 				Login1.InstructionText = "Logged in as " + ticket.Name;
 			}
-
-
 		}
-
 
 
 		protected void Login1_Authenticate(object sender, AuthenticateEventArgs e)

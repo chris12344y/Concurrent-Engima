@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using System.Web.Security;
+using System.Data.SqlClient;
+using System.Data;
+using System.Configuration;
+using System.Web;
+using System.Web.Configuration;
 
 namespace GroupProjectV4
 {
@@ -17,9 +17,43 @@ namespace GroupProjectV4
             if (Request.Cookies[FormsAuthentication.FormsCookieName] != null)
             {
                 ticket = FormsAuthentication.Decrypt(Request.Cookies[FormsAuthentication.FormsCookieName].Value);
-                UserNameTxtBox.Text = ticket.Name;
+                if (ticket.Name != "")
+                {
+                    UserNameTxtBox.Text = ticket.Name;
+                    DetailsView1.Visible = true;
+                    SignOutButton.Visible = true;
+                    LogInButton.Visible = false;
+                }
             }
-            else UserNameTxtBox.Text = null;
+            else
+            {
+                UserNameTxtBox.Text = null;
+                LogInButton.Visible = true;
+                SignOutButton.Visible = false;
+            }
+
+
+        }
+
+        protected void SignOutButton_Click(object sender, EventArgs e)
+        {
+            // Check for Authentication Cookie
+            if (Request.Cookies[FormsAuthentication.FormsCookieName] != null)
+            {
+                Request.Cookies[FormsAuthentication.FormsCookieName].Expires = DateTime.Now.AddDays(-1d);
+            }
+
+          
+            FormsAuthentication.SignOut();
+            FormsAuthentication.RedirectToLoginPage();
+            Response.Cookies.Remove(FormsAuthentication.FormsCookieName);
+            Session.Clear();
+            Session.Abandon();
+
+            FormsAuthentication.SignOut();
+            Session.Abandon();
+            
+            FormsAuthentication.RedirectFromLoginPage("", false);
         }
     }
 }
