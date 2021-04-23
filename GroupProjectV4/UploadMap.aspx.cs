@@ -32,7 +32,7 @@ namespace GroupProjectV4
             else
             {
                 //Otherwise, this is a new map so upload
-                if (mapFile.Value != "" && imageFile.Value != "")
+                if (mapFile.Value != "")
                 {
                     strFileName = mapFile.PostedFile.FileName;
                     
@@ -43,7 +43,6 @@ namespace GroupProjectV4
 
                     //create metadata
                     metaData += "mapname: " + mapFile.PostedFile.FileName + "\n"
-                        + "imagename: " + imageFile.PostedFile.FileName + "\n"
                         + "enddata";
                     // Write to file.
                     using (StreamWriter _metaData = new StreamWriter(strFilePath + "/meta", true))
@@ -64,12 +63,12 @@ namespace GroupProjectV4
                     mapFile.PostedFile.SaveAs(strFilePath);
                     mapUploadResult.Text = strFileName + " has been successfully uploaded.";
                     //}
-                    strFilePath = strMapFolder + "/" + MapNameTxtBox.Text + "/";
-                    strFileName = imageFile.PostedFile.FileName;
-                    strFileName = Path.GetFileName(strFileName);
-                    strFilePath = strFilePath + strFileName;
-                    imageFile.PostedFile.SaveAs(strFilePath);
-                    imageUploadResult.Text = strFileName + " has been successfully uploaded.";
+                    //strFilePath = strMapFolder + "/" + MapNameTxtBox.Text + "/";
+                    //strFileName = imageFile.PostedFile.FileName;
+                   // strFileName = Path.GetFileName(strFileName);
+                    //strFilePath = strFilePath + strFileName;
+                    //imageFile.PostedFile.SaveAs(strFilePath);
+                   // imageUploadResult.Text = strFileName + " has been successfully uploaded.";
                 }
 
                 else

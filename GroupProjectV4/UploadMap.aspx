@@ -23,23 +23,14 @@
         <tr>
             <td class="auto-style5">
                 <asp:Label ID="UploadMapLabel" runat="server" Text="Upload a map:"></asp:Label>
-                <INPUT ID="mapFile" type="file" NAME="mapFile" runat="server" /><asp:RequiredFieldValidator ID="MapFileValidator" runat="server" ControlToValidate="mapFile" ErrorMessage="*" ForeColor="#CC3300"></asp:RequiredFieldValidator>
-                <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="mapFile" ControlToValidate="imageFile" ErrorMessage="Map and Image cannot be the same" ForeColor="#CC3300" Operator="NotEqual"></asp:CompareValidator>
-            </td>
+                <INPUT ID="mapFile" type="file" NAME="mapFile" runat="server" /><asp:RequiredFieldValidator ID="MapFileValidator" runat="server" ControlToValidate="mapFile" ErrorMessage="*" ForeColor="#CC3300"></asp:RequiredFieldValidator>            </td>
             <td>
     <asp:Label id="mapUploadResult" Runat="server" ForeColor="#CC3300"></asp:Label>
             </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style5">
-                <asp:Label ID="UploadImageLabel" runat="server" Text="Upload an image:"></asp:Label>
-                <INPUT ID="imageFile" type="file" NAME="imageFile" runat="server" /><asp:RequiredFieldValidator ID="ImageValidator" runat="server" ControlToValidate="imageFile" ErrorMessage="*" ForeColor="#CC3300"></asp:RequiredFieldValidator>
-                <asp:CompareValidator ID="CompareValidator" runat="server" ControlToCompare="mapFile" ControlToValidate="imageFile" ErrorMessage="Map and Image cannot be the same" ForeColor="#CC3300" Operator="NotEqual"></asp:CompareValidator>
-            </td>
-            <td>
-    <asp:Label id="imageUploadResult" Runat="server" ForeColor="#CC3300"></asp:Label>
-            </td>
+            
             <td>&nbsp;</td>
         </tr>
         <tr>

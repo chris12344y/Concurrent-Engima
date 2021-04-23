@@ -87,15 +87,6 @@ namespace GroupProjectV4
         protected global::System.Web.UI.WebControls.RequiredFieldValidator MapFileValidator;
 
         /// <summary>
-        /// CompareValidator1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator1;
-
-        /// <summary>
         /// mapUploadResult control.
         /// </summary>
         /// <remarks>
@@ -103,51 +94,6 @@ namespace GroupProjectV4
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label mapUploadResult;
-
-        /// <summary>
-        /// UploadImageLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label UploadImageLabel;
-
-        /// <summary>
-        /// imageFile control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputFile imageFile;
-
-        /// <summary>
-        /// ImageValidator control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator ImageValidator;
-
-        /// <summary>
-        /// CompareValidator control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator;
-
-        /// <summary>
-        /// imageUploadResult control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label imageUploadResult;
 
         /// <summary>
         /// UploadButton control.
