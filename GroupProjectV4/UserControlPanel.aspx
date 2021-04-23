@@ -59,5 +59,7 @@
         <asp:Parameter Name="Email" Type="String" />
     </UpdateParameters>
 </asp:SqlDataSource>
+ <asp:Button ID="Maps" runat="server" PostBackUrl="~/ViewMaps.aspx" Text="View Maps" ValidationGroup="master" />
+
 </asp:Content>
 
