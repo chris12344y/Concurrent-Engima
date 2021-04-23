@@ -36,6 +36,7 @@
             </SelectParameters>
         </asp:SqlDataSource>
         <table class="auto-style1">
+
             <tr>
                 <td class="auto-style3">
                     <asp:Button ID="HomePageButton" runat="server" PostBackUrl="~/Default.aspx" Text="Home" ValidationGroup="master" />
@@ -43,6 +44,12 @@
                 <td class="auto-style3">
                     <asp:Button ID="ControlPanelButton" runat="server" PostBackUrl="~/UserControlPanel.aspx" Text="Admin Control Panel" ValidationGroup="master" />
                 </td>
+                <td class="auto-style3">
+                    <asp:Button ID="Upload" runat="server" PostBackUrl="~/UploadMap.aspx" Text="Upload a Image" ValidationGroup="master" />
+
+                </td>
+                <td class="auto-style3"></td>
+
                 <td class="auto-style3"></td>
                 <td class="auto-style4">
         <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" BackColor="White" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px" CellPadding="3" CellSpacing="1" DataSourceID="NameRoleDataSource" GridLines="None" Height="50px" Width="125px" Visible="False">
@@ -59,7 +66,7 @@
                     </td>
                 <td class="auto-style3">
                     <asp:Button ID="LogInButton" runat="server" PostBackUrl="~/UserLogin.aspx" Text="Log in" ValidationGroup="master" />
-                    <asp:Button ID="SignOutButton" runat="server" OnClick="SignOutButton_Click" PostBackUrl="~/Default.aspx" Text="Sign Out" Visible="False" ValidationGroup="master" />
+                    <asp:Button ID="SignOutButton" runat="server" OnClick="SignOutButton_Click" Text="Sign Out" Visible="False" ValidationGroup="master" />
                 </td>
             </tr>
             </table>

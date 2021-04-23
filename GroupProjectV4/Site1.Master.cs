@@ -40,6 +40,14 @@ namespace GroupProjectV4
 
         protected void SignOutButton_Click(object sender, EventArgs e)
         {
+            FormsAuthentication.SignOut();
+            Session.Abandon();
+
+            //clear auth cookie
+           
+            //clear session cookue
+      
+            Response.Redirect("~/Default.aspx");
             //TODO: NONE OF THIS WORKS
             //That being said, none of this breaks anything really?
             //Just essentially the list of things I've tried to sign out

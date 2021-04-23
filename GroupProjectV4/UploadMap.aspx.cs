@@ -27,7 +27,7 @@ namespace GroupProjectV4
             strFilePath = strMapFolder + "/" + MapNameTxtBox.Text + "/";
             if (Directory.Exists(strFilePath))
             {
-                //Throw error about map names etc
+                mapNameTakenLabel.Visible = true;//Throw error about map names etc
             }
             else
             {
