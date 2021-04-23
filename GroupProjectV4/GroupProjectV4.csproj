@@ -277,6 +277,7 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="ViewMaps.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -338,6 +339,13 @@
     </Compile>
     <Compile Include="UserControlPanel.aspx.designer.cs">
       <DependentUpon>UserControlPanel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewMaps.aspx.cs">
+      <DependentUpon>ViewMaps.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewMaps.aspx.designer.cs">
+      <DependentUpon>ViewMaps.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

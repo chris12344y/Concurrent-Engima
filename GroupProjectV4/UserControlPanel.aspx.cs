@@ -4,6 +4,9 @@ using System.Web.Security;
 
 namespace GroupProjectV4
 {
+    //TODO:
+    //delete user files from control panel
+    //https://www.c-sharpcorner.com/UploadFile/99bb20/get-the-list-of-all-files-from-server-directory-in-Asp-Net/
     public partial class UserControlPanel : System.Web.UI.Page
     {
         string getUser()

@@ -8,6 +8,9 @@ using System.Web.Configuration;
 
 namespace GroupProjectV4
 {
+    //TODO: ensure only admins can sign in
+    //I don't know how to actually figure out if a user has role "Admin" or not.
+    //Might need Christian to do this with his database wizardry
     public partial class Site1 : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
@@ -37,7 +40,7 @@ namespace GroupProjectV4
 
         protected void SignOutButton_Click(object sender, EventArgs e)
         {
-            //NONE OF THIS WORKS
+            //TODO: NONE OF THIS WORKS
             //That being said, none of this breaks anything really?
             //Just essentially the list of things I've tried to sign out
             // Check for Authentication Cookie

@@ -42,6 +42,15 @@ namespace GroupProjectV4
         protected global::System.Web.UI.WebControls.RequiredFieldValidator MapNameValidator;
 
         /// <summary>
+        /// mapNameTakenLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label mapNameTakenLabel;
+
+        /// <summary>
         /// frmConfirmation control.
         /// </summary>
         /// <remarks>
@@ -78,6 +87,15 @@ namespace GroupProjectV4
         protected global::System.Web.UI.WebControls.RequiredFieldValidator MapFileValidator;
 
         /// <summary>
+        /// CompareValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator1;
+
+        /// <summary>
         /// mapUploadResult control.
         /// </summary>
         /// <remarks>
@@ -112,6 +130,15 @@ namespace GroupProjectV4
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator ImageValidator;
+
+        /// <summary>
+        /// CompareValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator;
 
         /// <summary>
         /// imageUploadResult control.

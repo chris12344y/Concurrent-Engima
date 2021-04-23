@@ -38,10 +38,10 @@
         <table class="auto-style1">
             <tr>
                 <td class="auto-style3">
-                    <asp:Button ID="HomePageButton" runat="server" PostBackUrl="~/Default.aspx" Text="Home" />
+                    <asp:Button ID="HomePageButton" runat="server" PostBackUrl="~/Default.aspx" Text="Home" ValidationGroup="master" />
                 </td>
                 <td class="auto-style3">
-                    <asp:Button ID="ControlPanelButton" runat="server" PostBackUrl="~/UserControlPanel.aspx" Text="Admin Control Panel" />
+                    <asp:Button ID="ControlPanelButton" runat="server" PostBackUrl="~/UserControlPanel.aspx" Text="Admin Control Panel" ValidationGroup="master" />
                 </td>
                 <td class="auto-style3"></td>
                 <td class="auto-style4">
@@ -58,8 +58,8 @@
         </asp:DetailsView>
                     </td>
                 <td class="auto-style3">
-                    <asp:Button ID="LogInButton" runat="server" PostBackUrl="~/UserLogin.aspx" Text="Log in" />
-                    <asp:Button ID="SignOutButton" runat="server" OnClick="SignOutButton_Click" PostBackUrl="~/Default.aspx" Text="Sign Out" Visible="False" />
+                    <asp:Button ID="LogInButton" runat="server" PostBackUrl="~/UserLogin.aspx" Text="Log in" ValidationGroup="master" />
+                    <asp:Button ID="SignOutButton" runat="server" OnClick="SignOutButton_Click" PostBackUrl="~/Default.aspx" Text="Sign Out" Visible="False" ValidationGroup="master" />
                 </td>
             </tr>
             </table>
