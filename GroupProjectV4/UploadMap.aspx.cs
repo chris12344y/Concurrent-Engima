@@ -21,6 +21,7 @@ namespace GroupProjectV4
             string strFileName;
             string strFilePath;
             string strMapFolder;
+            string metaData = "";
             strMapFolder = Server.MapPath("./Maps");
             // Retrieve the name of the file that is posted.
             strFilePath = strMapFolder + "/" + MapNameTxtBox.Text + "/";
@@ -31,12 +32,25 @@ namespace GroupProjectV4
             else
             {
                 //Otherwise, this is a new map so upload
-                strFileName = mapFile.PostedFile.FileName;
-                strFileName = Path.GetFileName(strFileName);
                 if (mapFile.Value != "" && imageFile.Value != "")
                 {
+                    strFileName = mapFile.PostedFile.FileName;
+                    
+
+                    strFileName = Path.GetFileName(strFileName);
                     // Create the folder if it does not exist.
                     Directory.CreateDirectory(strFilePath);
+
+                    //create metadata
+                    metaData += "mapname: " + mapFile.PostedFile.FileName + "\n"
+                        + "imagename: " + imageFile.PostedFile.FileName + "\n"
+                        + "enddata";
+                    // Write to file.
+                    using (StreamWriter _metaData = new StreamWriter(strFilePath + "/meta", true))
+                    {
+                        _metaData.WriteLine(metaData);
+                    }
+
                     // Save the uploaded file to the server.
                     strFilePath = strFilePath + strFileName;
                     /*  We already know it doesn't exist, so we don't need to check here.. I'll leave it here if it helps someone in the future
