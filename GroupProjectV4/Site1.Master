@@ -35,6 +35,14 @@
                 <asp:ControlParameter ControlID="UserNameTxtBox" Name="Email" PropertyName="Text" Type="String" />
             </SelectParameters>
         </asp:SqlDataSource>
+        <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="Role" DataValueField="Role">
+        </asp:DropDownList>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:UserConnectionString %>" SelectCommand="SELECT [Role] FROM [Users] WHERE ([Email] = @Email)">
+            <SelectParameters>
+                <asp:ControlParameter ControlID="UserNameTxtBox" Name="Email" PropertyName="Text" Type="String" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+        <asp:SqlDataSource ID="RoleDataSource" runat="server"></asp:SqlDataSource>
         <table class="auto-style1">
 
             <tr>

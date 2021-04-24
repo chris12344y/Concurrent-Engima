@@ -34,7 +34,7 @@ namespace GroupProjectV4
                 LogInButton.Visible = true;
                 SignOutButton.Visible = false;
             }
-
+           
 
         }
 
