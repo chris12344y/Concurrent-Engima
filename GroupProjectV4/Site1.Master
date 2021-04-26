@@ -2,32 +2,19 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 <head runat="server">
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-    <style type="text/css">
-        .auto-style1 {
-            width: 100%;
-        }
-        .auto-style2 {
-            width: 379px;
-        }
-        .auto-style3 {
-            height: 34px;
-        }
-        .auto-style4 {
-            width: 379px;
-            height: 34px;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="/CSS-Sheets/Style-master.css" media="screen" />
+        
 </head>
 <body>
     <form id="form1" runat="server">
-    <div id="headerContent">
-        
-        
+    <div id="headerContent" class="header-content-master">
+   
+
         <br />
         <asp:TextBox ID="UserNameTxtBox" runat="server" CssClass="auto-style1" Width="110px" Visible="false"></asp:TextBox>
         <asp:SqlDataSource ID="NameRoleDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:UserConnectionString %>" SelectCommand="SELECT [Name], [Role] FROM [Users] WHERE ([Email] = @Email)">
@@ -35,16 +22,14 @@
                 <asp:ControlParameter ControlID="UserNameTxtBox" Name="Email" PropertyName="Text" Type="String" />
             </SelectParameters>
         </asp:SqlDataSource>
-        <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="Role" DataValueField="Role">
-        </asp:DropDownList>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:UserConnectionString %>" SelectCommand="SELECT [Role] FROM [Users] WHERE ([Email] = @Email)">
             <SelectParameters>
                 <asp:ControlParameter ControlID="UserNameTxtBox" Name="Email" PropertyName="Text" Type="String" />
             </SelectParameters>
         </asp:SqlDataSource>
         <asp:SqlDataSource ID="RoleDataSource" runat="server"></asp:SqlDataSource>
+        
         <table class="auto-style1">
-
             <tr>
                 <td class="auto-style3">
                     <asp:Button ID="HomePageButton" runat="server" PostBackUrl="~/Default.aspx" Text="Home" ValidationGroup="master" />
@@ -78,6 +63,7 @@
                 </td>
             </tr>
             </table>
+        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
         <br />
     </div>
     <div>

@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Web.UI.WebControls;
+using System.Data;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Web.Security;
 
 
@@ -21,20 +25,44 @@ namespace GroupProjectV4
             else return null;
 
         }
+        string GetRole(string user)
+        {
+            string role = "";
+            // get SQL Connection String
+            string constr = ConfigurationManager.ConnectionStrings["UserConnectionString"].ConnectionString;
+            // Set up SQL Query
+            SqlConnection con = new SqlConnection(constr);
+            SqlCommand cmd = new SqlCommand("GetRole");
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@name", user);
+            cmd.Connection = con;
+
+            // Execute SQL Query
+            con.Open();
+            role = Convert.ToString(cmd.ExecuteScalar());
+            con.Close();
+            return role;
+        }
 
         protected void Page_Load(object sender, EventArgs e)
         {
 
             // Check for Authentication Cookie
             string user = getUser();
+            string role = GetRole(user);
 
             // Redirect to login if not logged in
             if (user == null)
             {
                 FormsAuthentication.RedirectToLoginPage();
             }
-            
-
+            if(role != "Admin")
+            {
+                GridView1.Visible = false;
+                DetailsView2.Visible = false;
+                Maps.Visible = false;
+                
+            }
 
         }
     }

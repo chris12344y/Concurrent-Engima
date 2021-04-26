@@ -17,26 +17,56 @@ namespace GroupProjectV4
         {
             // Check for Authentication Cookie
             FormsAuthenticationTicket ticket;
+            string uName = "";
             if (Request.Cookies[FormsAuthentication.FormsCookieName] != null)
             {
-                ticket = FormsAuthentication.Decrypt(Request.Cookies[FormsAuthentication.FormsCookieName].Value);
-                if (ticket.Name != "")
+                try
                 {
-                    UserNameTxtBox.Text = ticket.Name;
-                    DetailsView1.Visible = true;
-                    SignOutButton.Visible = true;
-                    LogInButton.Visible = false;
+                    ticket = FormsAuthentication.Decrypt(Request.Cookies[FormsAuthentication.FormsCookieName].Value);
+
+                    if (ticket.Name != "")
+                    {
+                        uName = ticket.Name;
+                        UserNameTxtBox.Text = uName;
+                        DetailsView1.Visible = true;
+                        SignOutButton.Visible = true;
+                        LogInButton.Visible = false;
+                    }
+                    else
+                    {
+                        UserNameTxtBox.Text = null;
+                        LogInButton.Visible = true;
+                        SignOutButton.Visible = false;
+                    }
                 }
+
+                catch { }
+            }
+            string role = "";
+            // get SQL Connection String
+            string constr = ConfigurationManager.ConnectionStrings["UserConnectionString"].ConnectionString;
+            // Set up SQL Query
+            SqlConnection con = new SqlConnection(constr);
+            SqlCommand cmd = new SqlCommand("GetRole");
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@name", uName);
+            cmd.Connection = con;
+
+            // Execute SQL Query
+            con.Open();
+            role = Convert.ToString(cmd.ExecuteScalar());
+            con.Close();
+            if (role != "")
+            {
+                TextBox1.Text = role;
             }
             else
             {
-                UserNameTxtBox.Text = null;
-                LogInButton.Visible = true;
-                SignOutButton.Visible = false;
+                TextBox1.Visible = false;
+                ControlPanelButton.Visible = false;
             }
-           
 
-        }
+            }
 
         protected void SignOutButton_Click(object sender, EventArgs e)
         {
