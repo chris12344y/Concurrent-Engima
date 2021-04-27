@@ -1,14 +1,15 @@
 ﻿body {
-    background-image: linear-gradient(to right bottom, green 30%, blue 50%, blue 20%);
+    background-color:aquamarine;
 }
 
 #header-content {
     position: inherit;
     color: #333;
+    border: 50px solid red;
 }
 
 #head {
-    background-image: #333;
+    background-color:#333;
 }
 
 
