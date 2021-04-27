@@ -4,17 +4,25 @@
 
 <html lang="en">
 <head runat="server">
-    <title></title>
+    <title>Minecraft Map Server</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <link rel="stylesheet" type="text/css" href="/CSS-Sheets/Style-master.css" media="screen" />
-        
 </head>
 <body>
+    <!-- Need to work on this a bit
+    <div>
+         <ul class="sidebar">
+            <li class="sidebar li"><a href="Default.aspx" Visible="false">Home</a></li>
+            <li><a href="UserControlPanel.aspx">Admin Control Panel</a></li>
+            <li><a href="UploadMap.aspx">Upload a Map</a></li>
+            <li><a href="UserLogin.aspx">Login</a></li>
+            <li><a href="Sign Out">Testimonials</a> </li>
+        </ul>
+    </div>
+        -->
     <form id="form1" runat="server">
-    <div id="headerContent" class="header-content-master">
-   
-
+    <div id="headerContent">
         <br />
         <asp:TextBox ID="UserNameTxtBox" runat="server" CssClass="auto-style1" Width="110px" Visible="false"></asp:TextBox>
         <asp:SqlDataSource ID="NameRoleDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:UserConnectionString %>" SelectCommand="SELECT [Name], [Role] FROM [Users] WHERE ([Email] = @Email)">
@@ -28,8 +36,8 @@
             </SelectParameters>
         </asp:SqlDataSource>
         <asp:SqlDataSource ID="RoleDataSource" runat="server"></asp:SqlDataSource>
-        
-        <table class="auto-style1">
+
+     <table>
             <tr>
                 <td class="auto-style3">
                     <asp:Button ID="HomePageButton" runat="server" PostBackUrl="~/Default.aspx" Text="Home" ValidationGroup="master" CssClass="button" />
@@ -68,11 +76,14 @@
     </div>
     <div>
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
-        
         </asp:ContentPlaceHolder>
     </div>
         <p>
             &nbsp;</p>
     </form>
+    <div class="footer">
+        <p> I am a footer prototype.</p>
+    </div> 
+        
 </body>
 </html>

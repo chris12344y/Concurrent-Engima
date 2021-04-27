@@ -72,34 +72,7 @@ namespace GroupProjectV4
         {
             FormsAuthentication.SignOut();
             Session.Abandon();
-
-            //clear auth cookie
-           
-            //clear session cookue
-      
             Response.Redirect("~/Default.aspx");
-            //TODO: NONE OF THIS WORKS
-            //That being said, none of this breaks anything really?
-            //Just essentially the list of things I've tried to sign out
-            // Check for Authentication Cookie
-            /*
-            if (Request.Cookies[FormsAuthentication.FormsCookieName] != null)
-            {
-                Request.Cookies[FormsAuthentication.FormsCookieName].Expires = DateTime.Now.AddDays(-1d);
-            }
-
-          
-            FormsAuthentication.SignOut();
-            FormsAuthentication.RedirectToLoginPage();
-            Response.Cookies.Remove(FormsAuthentication.FormsCookieName);
-            Session.Clear();
-            Session.Abandon();
-
-            FormsAuthentication.SignOut();
-            Session.Abandon();
-            
-            FormsAuthentication.RedirectFromLoginPage("", false);
-            */
         }
     }
 }

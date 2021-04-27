@@ -366,6 +366,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
+    <Folder Include="Images\" />
     <Folder Include="Maps\" />
     <Folder Include="Models\" />
   </ItemGroup>

@@ -1,11 +1,32 @@
 ﻿body {
     background-color: lightblue;
+    background-image: 
 }
 
 .header-content-master {
     position: inherit 
     
 }
+
+.sidebar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+.sidebar li {
+    float: left;
+}
+
+.sidebar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+ }
 
 .header-table {
    
@@ -32,6 +53,38 @@
 .button-disabled {
     opacity: 0.6;
     cursor: not-allowed;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: darkgreen;
+    color: white;
+    text-align: center;
+}
+
+.table-test {
+overflow: hidden;
+  background-color: #333;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+}
+
+.table-test a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+}
+
+.table-test a:hover {
+    background: #ddd;
+    color: black;
 }
 
 
