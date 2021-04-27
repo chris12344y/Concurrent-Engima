@@ -1,59 +1,37 @@
 ﻿body {
-    background-color: lightblue;
-    background-image: 
+    background-image: linear-gradient(to right bottom, green 30%, blue 50%, blue 20%);
 }
 
-.header-content-master {
-    position: inherit 
-    
+#header-content {
+    position: inherit;
+    color: #333;
 }
 
-.sidebar {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: black;
+#head {
+    background-image: #333;
 }
 
-.sidebar li {
-    float: left;
-}
-
-.sidebar li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
- }
 
 .header-table {
    
 }
 
 .button {
-    background-color: #4CAF50;
+    background-color: #333;
     border: none;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: inline;
     font-size: 16px;
     transition-duration: 0.4s;
+    color:white;
 }
 
-.button:hover {
-        color: white;
+    .button:hover {
+        color: #111;
+    }
 
-}
-
-
-
-.button-disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-}
 
 .footer {
     position: fixed;
@@ -74,12 +52,12 @@ overflow: hidden;
 }
 
 .table-test a {
-        float: left;
-        display: block;
-        color: #f2f2f2;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
+   float: left;
+   display: block;
+   color: #f2f2f2;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
 }
 
 .table-test a:hover {
@@ -87,5 +65,31 @@ overflow: hidden;
     color: black;
 }
 
+#nav {
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    background-color: #333;
+    font-size: 16px;
+}
 
+#nav li {
+    float: left;
+}
 
+#nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#nav li a:hover {
+    background-color: #111;
+}
+
+#DetailsView1 {
+   float: left;
+}
