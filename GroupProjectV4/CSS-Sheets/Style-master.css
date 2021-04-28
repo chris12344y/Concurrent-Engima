@@ -1,21 +1,19 @@
 ﻿body {
-    background-color:aquamarine;
+    background-color: paleturquoise;
 }
 
 #header-content {
     position: inherit;
     color: #333;
     border: 50px solid red;
+    font-family:monospace;
 }
 
 #head {
-    background-color:#333;
+    background-color: #333;
+    background-image: url("../Page_Wallpapers/Minecraft_Logo.jpg")
 }
 
-
-.header-table {
-   
-}
 
 .button {
     background-color: #333;
@@ -27,11 +25,12 @@
     font-size: 16px;
     transition-duration: 0.4s;
     color:white;
+    font-family:monospace;
 }
 
-    .button:hover {
+ .button:hover {
         color: #111;
-    }
+ }
 
 
 .footer {
@@ -42,28 +41,7 @@
     background-color: darkgreen;
     color: white;
     text-align: center;
-}
-
-.table-test {
-overflow: hidden;
-  background-color: #333;
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
-  width: 100%; /* Full width */
-}
-
-.table-test a {
-   float: left;
-   display: block;
-   color: #f2f2f2;
-   text-align: center;
-   padding: 14px 16px;
-   text-decoration: none;
-}
-
-.table-test a:hover {
-    background: #ddd;
-    color: black;
+    font-family:monospace;
 }
 
 #nav {
@@ -72,6 +50,7 @@ overflow: hidden;
     overflow: hidden;
     background-color: #333;
     font-size: 16px;
+    font-family:monospace;
 }
 
 #nav li {
@@ -85,6 +64,7 @@ overflow: hidden;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 16px;
+    font-family:monospace;
 }
 
 #nav li a:hover {
