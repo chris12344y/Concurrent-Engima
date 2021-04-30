@@ -8,23 +8,13 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <link rel="stylesheet" type="text/css" href="/CSS-Sheets/Style-master.css" media="screen" />
-    
-    <style type="text/css">
-        .auto-style1 {
-            width: 2566px;
-            height: 46px;
-        }
-        .auto-style2 {
-            width: 2582px;
-            height: 83px;
-        }
-    </style>
+
     
 </head>
 <body> 
     <form id="form1" runat="server">
      <div id="headerContent">
-         <div id="titleimg" class="auto-style2">
+         <div id="titleimg">
             <img src="./Page_Wallpapers/mapbigger-header-cantidate.png" alt="maphead" draggable="auto" id="titlepic" />
                 <h1 id="webtitle">Minecraft Map Archive</h1>
         </div>
@@ -61,15 +51,16 @@
             <li><asp:Button ID="SignOutButton" runat="server" OnClick="SignOutButton_Click" Text="Sign Out" Visible="False" ValidationGroup="master" CssClass="button" Height="47px" Width="142px"/>&nbsp;</li>
          </ul> 
 <!-- Testing to see if we really need the table-->
-    <table>
+         
+    <table class="content_actual">
             <tr>
-                <td class="auto-style3">
+                <td>
                   <!--  <asp:Button ID="HomePageButton" runat="server" PostBackUrl="~/Default.aspx" Text="Home" ValidationGroup="master" CssClass="button" /> -->
                 </td>
-                <td class="auto-style3">
+                <td>
                    <!-- <asp:Button ID="ControlPanelButton" runat="server" PostBackUrl="~/UserControlPanel.aspx" Text="Admin Control Panel" ValidationGroup="master" CssClass="button" /> -->
                 </td>
-                <td class="auto-style3">
+                <td>
                   <!--  <asp:Button ID="Upload" runat="server" PostBackUrl="~/UploadMap.aspx" Text="Upload a Image" ValidationGroup="master" CssClass="button" /> -->
                 </td> 
                <!-- <td class="auto-style3"></td>
@@ -80,7 +71,7 @@
             </table> 
         <br />
     </div>   
-    <div>
+    <div class="Content">
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>

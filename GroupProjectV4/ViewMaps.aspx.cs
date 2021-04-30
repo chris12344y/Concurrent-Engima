@@ -23,12 +23,12 @@ namespace GroupProjectV4
         {
             if (!IsPostBack)
             {
-                string[] filePaths = Directory.GetFiles(Server.MapPath("~/Maps/"));
+                string[] filePaths = Directory.GetFiles(Server.MapPath("~/Images/"));
                 List<ListItem> files = new List<ListItem>();
                 foreach (string filePath in filePaths)
                 {
                     string fileName = Path.GetFileName(filePath);
-                    files.Add(new ListItem(fileName, "~/Maps/" + fileName));
+                    files.Add(new ListItem(fileName, "~/Images/" + fileName));
                 }
                 GridView1.DataSource = files;
                 GridView1.DataBind();

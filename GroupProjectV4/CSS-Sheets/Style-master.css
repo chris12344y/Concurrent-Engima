@@ -1,6 +1,6 @@
 ﻿body {
     background-color: paleturquoise;
-   
+    background-image: url("../Page_Wallpapers/header_background.png");
 }
 
 
@@ -15,28 +15,21 @@
 }
 
 #headerContent h1 {
-    font-size: 30px;
+    font-size: 27px;
     font-family: monospace;
     color: darkslateblue;
-    
     position: absolute;
-    bottom:45px;
-    right: 20px;
-    
+    bottom:86px;
+    left: 100px;
     background-repeat: no-repeat;
     background-position: center; 
-     padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 20px;
+    padding-right: 22px;
     z-index:2;
-    
-    
-   
-    
-
 } 
     
-#imagetext h1 {
-    font-size: 30px;
+/*#imagetext h1 {
+  
     font-family: monospace;
     color: red;
     position: relative;
@@ -47,15 +40,15 @@
     color: white;
     padding-left: 20px;
     padding-right: 20px;
-}
+} */
 
-#headerContent img {
+#titlepic {
     position: relative;
-    top: 70px;
-    left:1520px;
+    top: 20px;
+    left:100px;
     z-index:1;
-   width:343px;
-   height:88px;
+    width:343px;
+    height:90px;
 }
     
 
@@ -110,6 +103,7 @@
     font-size: 16px;
     font-family:monospace;
     z-index:0;
+   
     
  
     
@@ -141,8 +135,40 @@
    float: left;
 }
 
-#ContentPlaceHolder1 {
+#Content {
     background-image: url("../Page_Wallpapers/map-texture.png");
+    color:white;
 }
+
+.label_upload {
+    color:dimgray;
+    
+}
+
+.content_background {
+    z-index:0;
+    position:absolute;
+    right:250px;
+    width:900px;
+}
+
+#content_actual {
+    z-index: 1;
+}
+
+.content_actual table {
+    z-index: 1;
+    color:dimgrey;
+    position: absolute;
+    bottom: 500px;
+    right: 450px;
+    top: 300px;
+}
+
+.content_actual label
+{
+    z-index:inherit;
+}
+
 
 
