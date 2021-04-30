@@ -28,25 +28,33 @@ namespace GroupProjectV4
         string GetRole(string user)
         {
             string role = "";
-            // get SQL Connection String
-            string constr = ConfigurationManager.ConnectionStrings["UserConnectionString"].ConnectionString;
-            // Set up SQL Query
-            SqlConnection con = new SqlConnection(constr);
-            SqlCommand cmd = new SqlCommand("GetRole");
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@name", user);
-            cmd.Connection = con;
+            //check if user is null, and return if yeet.
+            if (user == null)
+            {
+                return null;
+            }
+            else
+            {
+                // get SQL Connection String
+                string constr = ConfigurationManager.ConnectionStrings["UserConnectionString"].ConnectionString;
+                // Set up SQL Query
+                SqlConnection con = new SqlConnection(constr);
+                SqlCommand cmd = new SqlCommand("GetRole");
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@name", user);
+                cmd.Connection = con;
 
-            // Execute SQL Query
-            con.Open();
-            role = Convert.ToString(cmd.ExecuteScalar());
-            con.Close();
-            return role;
+                // Execute SQL Query
+                con.Open();
+                role = Convert.ToString(cmd.ExecuteScalar());
+                con.Close();
+                return role;
+            }
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           
             // Check for Authentication Cookie
             string user = getUser();
             string role = GetRole(user);
@@ -56,13 +64,15 @@ namespace GroupProjectV4
             {
                 FormsAuthentication.RedirectToLoginPage();
             }
-            if(role != "Admin")
+            if (role != "Admin")
             {
                 GridView1.Visible = false;
                 DetailsView2.Visible = false;
                 Maps.Visible = false;
                 
             }
+
+
 
         }
     }

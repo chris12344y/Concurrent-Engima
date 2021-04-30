@@ -4,47 +4,35 @@
 
 <html lang="en">
 <head runat="server">
-    <title></title>
+    <title>Minecraft Map Server</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <link rel="stylesheet" type="text/css" href="/CSS-Sheets/Style-master.css" media="screen" />
-        
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div id="headerContent" class="header-content-master">
-   
 
-        <br />
-        <asp:TextBox ID="UserNameTxtBox" runat="server" CssClass="auto-style1" Width="110px" Visible="false"></asp:TextBox>
-        <asp:SqlDataSource ID="NameRoleDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:UserConnectionString %>" SelectCommand="SELECT [Name], [Role] FROM [Users] WHERE ([Email] = @Email)">
-            <SelectParameters>
-                <asp:ControlParameter ControlID="UserNameTxtBox" Name="Email" PropertyName="Text" Type="String" />
-            </SelectParameters>
-        </asp:SqlDataSource>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:UserConnectionString %>" SelectCommand="SELECT [Role] FROM [Users] WHERE ([Email] = @Email)">
+    
+</head>
+<body> 
+    <form id="form1" runat="server">
+     <div id="headerContent">
+         <div id="titleimg">
+            <img src="./Page_Wallpapers/mapbigger-header-cantidate.png" alt="maphead" draggable="auto" id="titlepic" />
+                <h1 id="webtitle">Minecraft Map Archive</h1>
+        </div>
+        <asp:TextBox ID="TextBox1" runat="server" Visible="false"></asp:TextBox>
+          <br />
+            <asp:TextBox ID="UserNameTxtBox" runat="server" Width="110px" Visible="false" Height="28px"></asp:TextBox>
+            <asp:SqlDataSource ID="NameRoleDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:UserConnectionString %>" SelectCommand="SELECT [Name], [Role] FROM [Users] WHERE ([Email] = @Email)">
+                <SelectParameters>
+                    <asp:ControlParameter ControlID="UserNameTxtBox" Name="Email" PropertyName="Text" Type="String" />
+                </SelectParameters>
+            </asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:UserConnectionString %>" SelectCommand="SELECT [Role] FROM [Users] WHERE ([Email] = @Email)">
             <SelectParameters>
                 <asp:ControlParameter ControlID="UserNameTxtBox" Name="Email" PropertyName="Text" Type="String" />
             </SelectParameters>
         </asp:SqlDataSource>
         <asp:SqlDataSource ID="RoleDataSource" runat="server"></asp:SqlDataSource>
-        
-        <table class="auto-style1">
-            <tr>
-                <td class="auto-style3">
-                    <asp:Button ID="HomePageButton" runat="server" PostBackUrl="~/Default.aspx" Text="Home" ValidationGroup="master" />
-                </td>
-                <td class="auto-style3">
-                    <asp:Button ID="ControlPanelButton" runat="server" PostBackUrl="~/UserControlPanel.aspx" Text="Admin Control Panel" ValidationGroup="master" />
-                </td>
-                <td class="auto-style3">
-                    <asp:Button ID="Upload" runat="server" PostBackUrl="~/UploadMap.aspx" Text="Upload a Image" ValidationGroup="master" />
-
-                </td>
-                <td class="auto-style3"></td>
-
-                <td class="auto-style3"></td>
-                <td class="auto-style4">
+    <ul id="nav" class="auto-style1">
         <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" BackColor="White" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px" CellPadding="3" CellSpacing="1" DataSourceID="NameRoleDataSource" GridLines="None" Height="50px" Width="125px" Visible="False">
             <EditRowStyle BackColor="#9471DE" Font-Bold="True" ForeColor="White" />
             <Fields>
@@ -56,17 +44,34 @@
             <PagerStyle BackColor="#C6C3C6" ForeColor="Black" HorizontalAlign="Right" />
             <RowStyle BackColor="#DEDFDE" ForeColor="Black" />
         </asp:DetailsView>
-                    </td>
-                <td class="auto-style3">
-                    <asp:Button ID="LogInButton" runat="server" PostBackUrl="~/UserLogin.aspx" Text="Log in" ValidationGroup="master" />
-                    <asp:Button ID="SignOutButton" runat="server" OnClick="SignOutButton_Click" Text="Sign Out" Visible="False" ValidationGroup="master" />
+            <li><a href="Default.aspx">Home</a></li>
+            <li><a href="UserControlPanel.aspx">Control Panel</a></li>
+            <li><a href="UploadMap.aspx">Upload A Map</a></li>
+            <li><asp:Button ID="LogInButton" runat="server" PostBackUrl="~/UserLogin.aspx" Text="Log in" ValidationGroup="master" CssClass="button" Height="49px" Width="131px" /> &nbsp;</li>
+            <li><asp:Button ID="SignOutButton" runat="server" OnClick="SignOutButton_Click" Text="Sign Out" Visible="False" ValidationGroup="master" CssClass="button" Height="47px" Width="142px"/>&nbsp;</li>
+         </ul> 
+<!-- Testing to see if we really need the table-->
+         
+    <table class="content_actual">
+            <tr>
+                <td>
+                  <!--  <asp:Button ID="HomePageButton" runat="server" PostBackUrl="~/Default.aspx" Text="Home" ValidationGroup="master" CssClass="button" /> -->
                 </td>
+                <td>
+                   <!-- <asp:Button ID="ControlPanelButton" runat="server" PostBackUrl="~/UserControlPanel.aspx" Text="Admin Control Panel" ValidationGroup="master" CssClass="button" /> -->
+                </td>
+                <td>
+                  <!--  <asp:Button ID="Upload" runat="server" PostBackUrl="~/UploadMap.aspx" Text="Upload a Image" ValidationGroup="master" CssClass="button" /> -->
+                </td> 
+               <!-- <td class="auto-style3"></td>
+                <td class="auto-style3"></td> -->
+               <!-- <td class="auto-style4">&nbsp;</td>
+                <td class="auto-style3">&nbsp;</td> -->
             </tr>
-            </table>
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+            </table> 
         <br />
-    </div>
-    <div>
+    </div>   
+    <div class="Content">
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>
@@ -74,5 +79,7 @@
         <p>
             &nbsp;</p>
     </form>
+    
+        
 </body>
 </html>

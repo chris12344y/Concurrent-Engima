@@ -47,7 +47,9 @@ namespace GroupProjectV4
 				//FormsAuthentication.SetAuthCookie(userName,false);
 				e.Authenticated = true;
 				FormsAuthentication.RedirectFromLoginPage(userName, false);
+				
 			}
+		
 		}
 	}
 }
