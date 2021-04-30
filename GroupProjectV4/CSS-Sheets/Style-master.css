@@ -27,6 +27,7 @@
 
 #titlepic {
     position: relative;
+    margin: auto;
     top: 20px;
     left:100px;
     z-index:1;
@@ -80,18 +81,21 @@
 
 #nav {
     list-style-type: none;
-    margin: 0;
+    position: relative;
+    margin: auto;
     overflow: hidden;
     background-color: #333;
     font-size: 16px;
-    font-family:monospace;
-    z-index:0;  
+    font-family: monospace;
+    z-index: 0;
 }
 
 #nav li {
     float: left;
     height:auto;
     width:auto;
+    position: relative;
+   margin:auto;
 }
 
 #nav li a {
@@ -104,6 +108,8 @@
     font-family:monospace;
    /* height:auto;
     width:auto; */
+   position: relative;
+   margin:auto;
 }
 
 #nav li a:hover {
@@ -126,10 +132,13 @@
 }
 
 .content_background {
-    z-index:0;
-    position:absolute;
-    right:550px;
-    width:900px;
+    z-index: 0;
+    position: relative;
+    width: 40vw;
+    margin-left: auto;
+    margin-right:auto;
+    width:50%;
+    display: block;
 }
 
 #content_actual {
@@ -138,11 +147,12 @@
 
 .content_actual table {
     z-index: 1;
-    color:dimgrey;
-    position: absolute;
-    bottom: 500px;
-    right: 750px;
-    top: 300px;
+    color: dimgrey;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    display: block;
 }
 
 .content_actual label
