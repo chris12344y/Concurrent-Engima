@@ -23,40 +23,45 @@ namespace GroupProjectV4
         {
             if (!IsPostBack)
             {
-                string[] filePaths = Directory.GetFiles(Server.MapPath("~/Images/"));
-                List<ListItem> files = new List<ListItem>();
+                string[] filePaths = Directory.GetFiles(Server.MapPath("~/Maps"));
+                List<ListItem> file = new List<ListItem>();
                 foreach (string filePath in filePaths)
                 {
                     string fileName = Path.GetFileName(filePath);
-                    files.Add(new ListItem(fileName, "~/Images/" + fileName));
+                    file.Add(new ListItem(fileName, "~/Maps/" + fileName));
                 }
-                GridView1.DataSource = files;
+                GridView1.DataSource = file;
                 GridView1.DataBind();
             }
-            //files is datasource for gridView1 here
-            /* List<ListItem> files = new List<ListItem>();
-             string path = Server.MapPath("~/Images/");
+            else
+            {
 
-             //iterate through all directories in the /Maps/ folder
-             string[] mapPaths = Directory.GetDirectories(path);
-             foreach(string mapPath in mapPaths)     //This loop runs once per directory, so this is a great place to add corresponding HTML? idk how to do that though.
-                                                     // I think you can add javascript to auto-update html? Though i feel like there's an easier way.
-             {
-                 //get all files in the current directory.
-                 string[] filePaths = Directory.GetFiles(mapPath);
+                //files is datasource for gridView1 here
+                List<ListItem> files = new List<ListItem>();
+                string path = Server.MapPath("~/Maps/");
 
-                 //here, could probably open the metadata file and display information
-                 foreach(string filePath in filePaths)
-                 {
-                     //add each file to the datasource
-                     files.Add(new ListItem(Path.GetFileName(filePath), filePath));
-                 }
-                 //bind & display
-                 GridView1.DataSource = files;
-                 GridView1.DataBind();*/
-        
+                //iterate through all directories in the /Maps/ folder
+                string[] mapPaths = Directory.GetDirectories(path);
+                foreach (string mapPath in mapPaths)    //This loop runs once per directory, so this is a great place to add corresponding HTML? idk how to do that though.
+                                                         // I think you can add javascript to auto-update html? Though i feel like there's an easier way.
+                {
+                    //get all files in the current directory.
+                    string[] filePaths = Directory.GetFiles(mapPath);
+
+                    //here, could probably open the metadata file and display information
+                    foreach (string filePath in filePaths)
+                    {
+                        //add each file to the datasource
+                        files.Add(new ListItem(Path.GetFileName(filePath), filePath));
+                    }
+                    //bind & display
+                    GridView1.DataSource = files;
+                    GridView1.DataBind();
+                }
+            }
         }
-        
+
+
         protected void DownloadFile(object sender, EventArgs e)
         {
             string filePath = (sender as LinkButton).CommandArgument;
@@ -72,5 +77,6 @@ namespace GroupProjectV4
             File.Delete(filePath);
             Response.Redirect(Request.Url.AbsoluteUri);
         }
+
     }
 }

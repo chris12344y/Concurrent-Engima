@@ -16,7 +16,7 @@
 
 #headerContent h1 {
     font-size: 27px;
-    font-family: monospace;
+    font-family: 'Wingdings 3';
     color: darkslateblue;
     position: absolute;
     bottom:86px;
@@ -140,6 +140,7 @@
     color:white;
 }
 
+/*Section Start: Upload Map*/
 .label_upload {
     color:dimgray;
     
@@ -148,7 +149,7 @@
 .content_background {
     z-index:0;
     position:absolute;
-    right:250px;
+    right:550px;
     width:900px;
 }
 
@@ -161,7 +162,7 @@
     color:dimgrey;
     position: absolute;
     bottom: 500px;
-    right: 450px;
+    right: 750px;
     top: 300px;
 }
 
@@ -170,5 +171,29 @@
     z-index:inherit;
 }
 
+span#ContentPlaceHolder1_mapUploadResult {
+    position: absolute;
+    top:211px;
+    left:2px;
+    bottom:auto;
+}
+
+span#ContentPlaceHolder1_mapNameTakenLabel {
+    position: fixed;
+    left: 1050px;
+    bottom: 770px;
+}
+
+input#ContentPlaceHolder1_UploadButton {
+    position: absolute;
+    left: 70px;
+}
+
+span#ContentPlaceHolder1_MapFileValidator {
+    position: relative;
+    right: 75px;
+}
+
+/*Section End: Upload Map*/
 
 

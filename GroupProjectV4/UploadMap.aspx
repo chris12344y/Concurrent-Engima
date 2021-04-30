@@ -9,7 +9,7 @@
     <table>
         <tr>
             <td>
-                &nbsp;<asp:Label ID="MapNameLabel" runat="server" Text="Map Name: " CssClass="label_upload"></asp:Label>
+                <asp:Label ID="MapNameLabel" runat="server" Text="Map Name: " CssClass="label_upload"></asp:Label>
                 <asp:TextBox ID="MapNameTxtBox" runat="server"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="MapNameValidator" runat="server" ControlToValidate="MapNameTxtBox" ErrorMessage="*" ForeColor="#CC3300"></asp:RequiredFieldValidator>
             </td>
@@ -24,7 +24,9 @@
                 <asp:Label ID="UploadMapLabel" runat="server" Text="Upload a map:" CssClass="label_upload"></asp:Label>
                 <INPUT ID="mapFile" type="file" NAME="mapFile" runat="server" /><asp:RequiredFieldValidator ID="MapFileValidator" runat="server" ControlToValidate="mapFile" ErrorMessage="*" ForeColor="#CC3300" CssClass="label_upload"></asp:RequiredFieldValidator>            </td>
             <td>
-    <asp:Label id="mapUploadResult" Runat="server" ForeColor="#CC3300" CssClass="label_upload"></asp:Label>
+                <div id="label_result">
+                    <asp:Label id="mapUploadResult" Runat="server" ForeColor="#CC3300"></asp:Label>
+                 </div>
             </td>
             <td>&nbsp;</td>
         </tr>

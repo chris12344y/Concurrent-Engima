@@ -24,7 +24,7 @@ namespace GroupProjectV4
             string metaData = "";
             strMapFolder = Server.MapPath("~/Maps/");
             // Retrieve the name of the file that is posted.
-            strFilePath = strMapFolder + "/" + MapNameTxtBox.Text + "/";
+            strFilePath = strMapFolder + "/" + MapNameTxtBox.Text ;
             if (Directory.Exists(strFilePath))
             {
                 mapNameTakenLabel.Visible = true;//Throw error about map names etc
@@ -42,13 +42,13 @@ namespace GroupProjectV4
                     Directory.CreateDirectory(strFilePath);
 
                     //create metadata
-                    metaData += "mapname: " + mapFile.PostedFile.FileName + "\n"
-                        + "enddata";
+                   // metaData += "mapname: " + mapFile.PostedFile.FileName + "\n"
+                       // + "enddata";
                     // Write to file.
-                    using (StreamWriter _metaData = new StreamWriter(strFilePath + "/meta", true))
-                    {
-                        _metaData.WriteLine(metaData);
-                    }
+                   // using (StreamWriter _metaData = new StreamWriter(strFilePath + "/meta", true))
+                   // {
+                   //     _metaData.WriteLine(metaData);
+                   // }
 
                     // Save the uploaded file to the server.
                     strFilePath = strFilePath + strFileName;
