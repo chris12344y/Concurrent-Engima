@@ -175,4 +175,11 @@ span#ContentPlaceHolder1_MapFileValidator {
 
 /*Section End: Upload Map*/
 
+/*Section Start: Login Page*/
+
+table#ContentPlaceHolder1_Login1 {
+    position: fixed;
+    right: 650px;
+}
+
 
