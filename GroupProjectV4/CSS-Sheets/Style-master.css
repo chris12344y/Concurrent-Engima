@@ -7,16 +7,12 @@
 #headerContent {
     position: sticky;
     color: #333;
-    font-family: monospace;
-    
-
-   
-    
+    font-family: monospace; 
 }
 
 #headerContent h1 {
     font-size: 27px;
-    font-family: 'Wingdings 3';
+    font-family: monospace;
     color: darkslateblue;
     position: absolute;
     bottom:86px;
@@ -28,19 +24,6 @@
     z-index:2;
 } 
     
-/*#imagetext h1 {
-  
-    font-family: monospace;
-    color: red;
-    position: relative;
-    bottom: 10px;
-    right: 10px;
-    float:left;
-    background-color: black;
-    color: white;
-    padding-left: 20px;
-    padding-right: 20px;
-} */
 
 #titlepic {
     position: relative;
@@ -102,11 +85,7 @@
     background-color: #333;
     font-size: 16px;
     font-family:monospace;
-    z-index:0;
-   
-    
- 
-    
+    z-index:0;  
 }
 
 #nav li {
