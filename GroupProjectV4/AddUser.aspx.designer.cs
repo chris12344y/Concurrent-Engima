@@ -15,13 +15,13 @@ namespace GroupProjectV4
     {
 
         /// <summary>
-        /// labelU control.
+        /// UsernameLbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl labelU;
+        protected global::System.Web.UI.WebControls.Label UsernameLbl;
 
         /// <summary>
         /// UserNameTxtBox control.
@@ -33,6 +33,15 @@ namespace GroupProjectV4
         protected global::System.Web.UI.WebControls.TextBox UserNameTxtBox;
 
         /// <summary>
+        /// EmailLbl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label EmailLbl;
+
+        /// <summary>
         /// EmailTxtBox control.
         /// </summary>
         /// <remarks>
@@ -42,6 +51,15 @@ namespace GroupProjectV4
         protected global::System.Web.UI.WebControls.TextBox EmailTxtBox;
 
         /// <summary>
+        /// PasswordLbl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label PasswordLbl;
+
+        /// <summary>
         /// PasswordTxtBox control.
         /// </summary>
         /// <remarks>
@@ -49,6 +67,15 @@ namespace GroupProjectV4
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox PasswordTxtBox;
+
+        /// <summary>
+        /// RoleLbl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label RoleLbl;
 
         /// <summary>
         /// RolesList control.

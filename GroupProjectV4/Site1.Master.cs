@@ -66,7 +66,7 @@ namespace GroupProjectV4
                 ControlPanelButton.Visible = false;
             }
 
-            }
+        }
 
         protected void SignOutButton_Click(object sender, EventArgs e)
         {
