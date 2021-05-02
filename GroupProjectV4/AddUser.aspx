@@ -1,13 +1,12 @@
 ﻿<%@ Page Title="User Signup" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="AddUser.aspx.cs" Inherits="GroupProjectV4.AddUser" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    <style type="text/css">
-        .auto-style1 {
-            width: 100%;
-        }
-    </style>
+        <link rel="stylesheet" type="text/css" href="/CSS-Sheets/Style-master.css" media="screen" />
+
 </asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <table class="auto-style1">
+    <div id="AddUserTable">
+    <table>
         <tr>
             <td>
                 <asp:Label ID="UsernameLbl" runat="server" Text="User Name"></asp:Label>
@@ -64,4 +63,5 @@
             </td>
         </tr>
     </table>
+    </div>
 </asp:Content>

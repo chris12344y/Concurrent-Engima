@@ -149,10 +149,13 @@
     z-index: 1;
     color: dimgrey;
     position: relative;
-    margin-left: auto;
+    /* margin-left: auto; */
     margin-right: auto;
-    width: 50%;
-    display: block;
+    /* width: 50%; */
+    display: table;
+    margin: auto;
+    top: -30vw;
+    left: 3vw;
 }
 
 .content_actual label
@@ -189,9 +192,17 @@ span#ContentPlaceHolder1_MapFileValidator {
 
 
 table#ContentPlaceHolder1_Login1 {
+    /* position: fixed; */
+    /* right: 650px; */
     position: relative;
     margin: auto;
-   
+}
+/*Section End: Login*/
+/*Section Start: AddUser*/
+
+div#AddUserTable Table {
+    position: relative;
+    margin: auto;
 }
 
 
