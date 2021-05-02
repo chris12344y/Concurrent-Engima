@@ -11,18 +11,23 @@
 }
 
 #headerContent h1 {
-    font-size: 27px;
+      font-size: 27px;
     font-family: monospace;
     color: darkslateblue;
-    position: absolute;
-    bottom:86px;
-    left: 100px;
+    position: relative;
+    /* bottom: 86vw; */
+    /* left: 114px; */
+    top: -44px;
     background-repeat: no-repeat;
-    background-position: center; 
-    padding-left: 20px;
-    padding-right: 22px;
-    z-index:2;
-} 
+    /* background-position: center; */
+    /* padding-left: 20px; */
+    /* padding-right: 22px; */
+    z-index: 2;
+    Anc: visible;
+    margin: auto;
+    /* transform: translate(122px, -44px); */
+    padding-left: 115px;
+}
     
 
 #titlepic {
@@ -205,4 +210,10 @@ div#AddUserTable Table {
     margin: auto;
 }
 
+/*Section End AddUser*/
+/*Section Start View Maps*/
+.content_actual_table {
+    margin:auto;
+    position:relative;
+}
 

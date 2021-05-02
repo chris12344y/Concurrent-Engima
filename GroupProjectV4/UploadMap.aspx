@@ -31,10 +31,6 @@
    
         </tr>
         <tr>
-            
-           
-        </tr>
-        <tr>
             <td>
                 <asp:Button ID="UploadButton" type="submit" runat="server" Text="Upload" OnClick="UploadButton_Click" CssClass="button" />
             </td>
