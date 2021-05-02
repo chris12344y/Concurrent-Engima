@@ -3,7 +3,6 @@ using System.Data;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Text.RegularExpressions;
-using System.Web.Security;
 
 namespace GroupProjectV4
 {
@@ -11,48 +10,8 @@ namespace GroupProjectV4
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            FormsAuthenticationTicket ticket;
-            string uName = "";
-            if (Request.Cookies[FormsAuthentication.FormsCookieName] != null)
-            {
-                try
-                {
-                    ticket = FormsAuthentication.Decrypt(Request.Cookies[FormsAuthentication.FormsCookieName].Value);
 
-                    if (ticket.Name != "")
-                    {
-                        uName = ticket.Name;
-                    }
-                    else
-                    {
-                        
-                    }
-                }
-
-                catch { }
-            }
-            string role = "";
-            // get SQL Connection String
-            string constr = ConfigurationManager.ConnectionStrings["UserConnectionString"].ConnectionString;
-            // Set up SQL Query
-            SqlConnection con = new SqlConnection(constr);
-            SqlCommand cmd = new SqlCommand("GetRole");
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@name", uName);
-            cmd.Connection = con;
-
-            // Execute SQL Query
-            con.Open();
-            role = Convert.ToString(cmd.ExecuteScalar());
-            con.Close();
-            
-            if(role == "Admin")
-            {
-                RolesList.Visible = true;
-                RoleLbl.Visible = true;
-            }
         }
-
         bool IsValidEmail(string str)
         {
             return Regex.IsMatch(str, @"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$");
