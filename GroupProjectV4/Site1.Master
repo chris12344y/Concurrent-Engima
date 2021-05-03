@@ -8,6 +8,34 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <link rel="stylesheet" type="text/css" href="/CSS-Sheets/Style-master.css" media="screen" />
+    <style type="text/css" style="width: 10%; height: 10%">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            width: 100%;
+            display:inline-block;
+            background-image: url('Page_Wallpapers/grass_2.jpg') !important;
+            background-repeat: no-repeat !important;
+            background-size: 100% 100% !important;
+        }
+        .tdHead{
+            font-size: 20px;
+            color: white;
+            text-shadow: 2px 2px 4px black;
+        }
+        .auto-style3 {
+            height: 22px;
+        }
+        .footerImage {
+            background-image: url('Page_Wallpapers/Minecraft-logo-mojang-small2.png') !important;
+            background-repeat: no-repeat;
+            width: 150px;
+            height: 164px;
+        }
+    </style>
+    </style>
+    </style>
 </head>
 <body> 
     <form id="form1" runat="server">
@@ -74,10 +102,31 @@
     <div class="Content">
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         
-        </asp:ContentPlaceHolder>
+    <div id ="footer">
+        <table class="auto-style2">
+            <tr class="tdHead">
+                <td >Minecraft Map Archive</td>
+                <td>Social Media</td>
+                <td>Support</td>
+            </tr>
+            <tr>
+                <td class="footerImage" rowspan ="3"></td>
+                <td><a href="https://discord.com/">Discord</a></td>
+                <td rowspan ="3"><a href = "mailto: support@example.com">Send Email</a></td>
+            </tr>
+            <tr>
+                <td class="auto-style3"><a href="https://twitter.com/">Twitter</a></td>
+            </tr>
+            <tr>
+                <td><a href="https://www.facebook.com/">Facebook</a></td>
+            </tr>
+        </table>
+        
     </div>
-        <p>
-            &nbsp;</p>
-    </form>     
+    </form>
+    
+        
+    
+        
 </body>
 </html>
