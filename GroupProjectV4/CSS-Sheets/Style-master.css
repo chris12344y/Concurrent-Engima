@@ -78,6 +78,7 @@
     color: white;
     text-align: center;
     font-family:monospace;
+   
 }
 
 #nav {
@@ -211,6 +212,7 @@ div#AddUserTable Table {
 
 /*Section End AddUser*/
 /*Section Start View Maps*/
+
 .content_actual_table {
     margin:auto;
     position:relative;
