@@ -87,6 +87,33 @@ namespace GroupProjectV4
         protected global::System.Web.UI.WebControls.DetailsView DetailsView1;
 
         /// <summary>
+        /// HomePageButton1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button HomePageButton1;
+
+        /// <summary>
+        /// controlPanelBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button controlPanelBtn;
+
+        /// <summary>
+        /// UploadMapButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button UploadMapButton;
+
+        /// <summary>
         /// ViewMaps control.
         /// </summary>
         /// <remarks>
@@ -121,15 +148,6 @@ namespace GroupProjectV4
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button HomePageButton;
-
-        /// <summary>
-        /// ControlPanelButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ControlPanelButton;
 
         /// <summary>
         /// Upload control.

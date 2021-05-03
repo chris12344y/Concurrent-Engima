@@ -13,11 +13,15 @@
             width: 100%;
         }
         .auto-style2 {
-            width: 100%;
-            display:inline-block;
-            background-image: url('Page_Wallpapers/grass_2.jpg') !important;
-            background-repeat: no-repeat !important;
-            background-size: 100% 100% !important;
+                width: 110%;
+                display: inline-block;
+                background-image: url(Page_Wallpapers/grass_2.jpg) !important;
+                background-repeat: no-repeat !important;
+                background-size: 100% 100% !important;
+                position: relative;
+                left: 0;
+                bottom: 0;
+    
         }
         .tdHead{
             font-size: 20px;
@@ -33,8 +37,6 @@
             width: 150px;
             height: 164px;
         }
-    </style>
-    </style>
     </style>
 </head>
 <body> 
@@ -59,6 +61,7 @@
         </asp:SqlDataSource>
         <asp:SqlDataSource ID="RoleDataSource" runat="server"></asp:SqlDataSource>
     <ul id="nav" class="auto-style1">
+        <li>
         <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" BackColor="White" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px" CellPadding="3" CellSpacing="1" DataSourceID="NameRoleDataSource" GridLines="None" Height="50px" Width="125px" Visible="False">
             <EditRowStyle BackColor="#9471DE" Font-Bold="True" ForeColor="White" />
             <Fields>
@@ -69,14 +72,13 @@
             <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#E7E7FF" />
             <PagerStyle BackColor="#C6C3C6" ForeColor="Black" HorizontalAlign="Right" />
             <RowStyle BackColor="#DEDFDE" ForeColor="Black" />
-        </asp:DetailsView>
-            <li><a href="Default.aspx">Home</a></li>
-            <li><a href="UserControlPanel.aspx">Control Panel</a></li>
-            <li><a href="UploadMap.aspx">Upload A Map</a></li>
-            <li><asp:Button ID="ViewMaps" runat="server" PostBackUrl="~/ViewMapUser.aspx" Text="Browse Maps" Visible="True" ValidationGroup="master" CssClass="button" Height="47px" Width="142px"/></li>
-            <li><asp:Button ID="LogInButton" runat="server" PostBackUrl="~/UserLogin.aspx" Text="Log in" ValidationGroup="master" CssClass="button" Height="49px" Width="131px" /></li>
-            <li><asp:Button ID="SignOutButton" runat="server" OnClick="SignOutButton_Click" Text="Sign Out" Visible="False" ValidationGroup="master" CssClass="button" Height="47px" Width="142px"/></li>
-
+        </asp:DetailsView></li>
+            <li><asp:Button ID="HomePageButton1" runat="server" Text="Home" PostBackUrl="~/Default.aspx" CssClass="button" /></li>             
+            <li><asp:Button ID="controlPanelBtn" runat="server" Text="Control Panel" PostBackUrl="~/UserControlPanel.aspx" CssClass="button" /></li>             
+            <li><asp:Button ID="UploadMapButton" runat="server" Text="Upload Map" PostBackUrl="~/UploadMap.aspx" CssClass="button" /></li>      
+            <li><asp:Button ID="ViewMaps" runat="server" Text="Browse Maps" PostBackUrl="~/ViewMapUser.aspx" CssClass="button" /></li>
+        <li><asp:Button ID="LogInButton" runat="server" Text="Log in" PostBackUrl="~/UserLogin.aspx" ValidationGroup="master" CssClass="button"/></li>             
+        <li><asp:Button ID="SignOutButton" runat="server" Text="Sign Out" OnClick="SignOutButton_Click" Visible="False" ValidationGroup="master" CssClass="button"/></li>
          </ul> 
 <!-- Testing to see if we really need the table-->
          
@@ -86,7 +88,7 @@
                   <!--  <asp:Button ID="HomePageButton" runat="server" PostBackUrl="~/Default.aspx" Text="Home" ValidationGroup="master" CssClass="button" /> -->
                 </td>
                 <td>
-                   <!-- <asp:Button ID="ControlPanelButton" runat="server" PostBackUrl="~/UserControlPanel.aspx" Text="Admin Control Panel" ValidationGroup="master" CssClass="button" /> -->
+              
                 </td>
                 <td>
                   <!--  <asp:Button ID="Upload" runat="server" PostBackUrl="~/UploadMap.aspx" Text="Upload a Image" ValidationGroup="master" CssClass="button" /> -->
@@ -101,7 +103,8 @@
     </div>   
     <div class="Content">
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
-        
+        </asp:ContentPlaceHolder>
+     </div>
     <div id ="footer">
         <table class="auto-style2">
             <tr class="tdHead">
@@ -115,10 +118,10 @@
                 <td rowspan ="3"><a href = "mailto: support@example.com">Send Email</a></td>
             </tr>
             <tr>
-                <td class="auto-style3"><a href="https://twitter.com/">Twitter</a></td>
+                <td class="auto-style3"><a href="https://twitter.com/minecraft">Twitter</a></td>
             </tr>
             <tr>
-                <td><a href="https://www.facebook.com/">Facebook</a></td>
+                <td><a href="https://twitter.com/minecraft">Facebook</a></td>
             </tr>
         </table>
         

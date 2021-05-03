@@ -63,7 +63,7 @@ namespace GroupProjectV4
             else
             {
                 TextBox1.Visible = false;
-                ControlPanelButton.Visible = false;
+                controlPanelBtn.Visible = false;
             }
 
         }
