@@ -133,7 +133,6 @@
 /*Section Start: Upload Map*/
 .label_upload {
     color:dimgray;
-    
 }
 
 .content_background {
@@ -176,9 +175,8 @@ span#ContentPlaceHolder1_mapUploadResult {
 }
 
 span#ContentPlaceHolder1_mapNameTakenLabel {
-    position: fixed;
-    left: 1050px;
-    bottom: 770px;
+    position: relative;
+    left: -100px;
 }
 
 input#ContentPlaceHolder1_UploadButton {
@@ -201,6 +199,7 @@ input#ContentPlaceHolder1_mapFile {
     color: black;
     position: relative;
 }
+
 /*Section End: Upload Map*/
 
 /*Section Start: Login Page*/
