@@ -2,7 +2,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <div id=""server">
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="Email" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None">
         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
         <Columns>
@@ -22,7 +21,6 @@
         <SortedDescendingCellStyle BackColor="#FFFDF8" />
         <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
     </asp:GridView>
- </div>
 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:UserConnectionString %>" SelectCommand="SELECT [Name], [Email], [Role] FROM [Users]"></asp:SqlDataSource>
 <asp:DetailsView ID="DetailsView2" runat="server" AutoGenerateRows="False" CellPadding="4" DataKeyNames="Email" DataSourceID="UpdateCustomerDataSource" ForeColor="#333333" GridLines="None" Height="50px" Width="125px">
     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
@@ -61,7 +59,7 @@
         <asp:Parameter Name="Email" Type="String" />
     </UpdateParameters>
 </asp:SqlDataSource>
- <asp:Button ID="Maps" runat="server" PostBackUrl="~/ViewMaps.aspx" Text="View Maps" ValidationGroup="master" />
+ <asp:Button ID="Maps" runat="server" PostBackUrl="~/ViewMaps.aspx" Text="Manage Maps" ValidationGroup="master" CssClass="button" />
 
 </asp:Content>
 

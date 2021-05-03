@@ -228,3 +228,14 @@ div#AddUserTable Table {
     position:relative;
 }
 
+table#ContentPlaceHolder1_GridView1 {
+    position: relative;
+    left: 36%;
+}
+
+input#ContentPlaceHolder1_Maps {
+    padding: 1%;
+    position: relative;
+    left: 41%;
+}
+
