@@ -158,6 +158,22 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Images\Delete.png" />
+    <Content Include="Images\internet-exp.png" />
+    <Content Include="Images\network-image.png" />
+    <Content Include="Images\Picture1.png" />
+    <Content Include="Page_Wallpapers\grass_2.jpg" />
+    <Content Include="Page_Wallpapers\header_background.png" />
+    <Content Include="Page_Wallpapers\map-texture.png" />
+    <Content Include="Page_Wallpapers\mapbigger-header-cantidate.png" />
+    <Content Include="Page_Wallpapers\Minecraft-background-forestbyOcean.jpg" />
+    <Content Include="Page_Wallpapers\Minecraft-logo-mojang-small2.png" />
+    <Content Include="Page_Wallpapers\Minecraft-logo-mojang.png" />
+    <Content Include="Page_Wallpapers\minecraft_icon.png" />
+    <Content Include="Page_Wallpapers\Minecraft_Logo.jpg" />
+    <Content Include="Page_Wallpapers\Minecraft_world_picture.png" />
+    <Content Include="Page_Wallpapers\Mountain-by-the-sea.jpg" />
+    <Content Include="Page_Wallpapers\widget.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -377,10 +393,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
-    <Folder Include="Images\" />
     <Folder Include="Maps\" />
     <Folder Include="Models\" />
-    <Folder Include="Page_Wallpapers\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

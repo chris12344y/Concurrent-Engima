@@ -12,7 +12,7 @@
         .auto-style1 {
             width: 100%;
         }
-        .auto-style2 {
+        .footerTable {
                 width: 110%;
                 display: inline-block;
                 background-image: url(Page_Wallpapers/grass_2.jpg) !important;
@@ -21,21 +21,30 @@
                 position: relative;
                 left: 0;
                 bottom: 0;
-    
         }
-        .tdHead{
+        .footerTable{
+            white-space:nowrap;
+        }
+        .tdHead td{
+            position: sticky;
             font-size: 20px;
             color: white;
             text-shadow: 2px 2px 4px black;
-        }
-        .auto-style3 {
-            height: 22px;
+            width: 30%
         }
         .footerImage {
             background-image: url('Page_Wallpapers/Minecraft-logo-mojang-small2.png') !important;
             background-repeat: no-repeat;
             width: 150px;
             height: 164px;
+        }
+        .footerLink a:link{
+            color: antiquewhite;
+            text-shadow: 2px 2px 4px black;
+        }
+        .footerLink a:visited{
+            color: antiquewhite;
+            text-shadow: 2px 2px 4px black;
         }
     </style>
 </head>
@@ -46,7 +55,6 @@
             <img src="./Page_Wallpapers/mapbigger-header-cantidate.png" alt="maphead" draggable="auto" id="titlepic" />
                 <h1 id="webtitle">Minecraft Map Archive</h1>
         </div>
-        <asp:TextBox ID="TextBox1" runat="server" Visible="false"></asp:TextBox>
           <br />
             <asp:TextBox ID="UserNameTxtBox" runat="server" Width="110px" Visible="false" Height="28px"></asp:TextBox>
             <asp:SqlDataSource ID="NameRoleDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:UserConnectionString %>" SelectCommand="SELECT [Name], [Role] FROM [Users] WHERE ([Email] = @Email)">
@@ -62,66 +70,57 @@
         <asp:SqlDataSource ID="RoleDataSource" runat="server"></asp:SqlDataSource>
     <ul id="nav" class="auto-style1">
         <li>
-        <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" BackColor="White" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px" CellPadding="3" CellSpacing="1" DataSourceID="NameRoleDataSource" GridLines="None" Height="50px" Width="125px" Visible="False">
-            <EditRowStyle BackColor="#9471DE" Font-Bold="True" ForeColor="White" />
+        <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" BackColor="#333333" BorderColor="#333333" BorderStyle="None" BorderWidth="0px" CellPadding="3" CellSpacing="1" DataSourceID="NameRoleDataSource" GridLines="None" Height="50px" Width="125px" Visible="False">
+            <AlternatingRowStyle BorderStyle="None" />
+            <CommandRowStyle BorderStyle="None" />
+            <EditRowStyle BackColor="#333333" Font-Bold="True" ForeColor="#333333" BorderStyle="None" />
+            <FieldHeaderStyle BorderStyle="None" />
             <Fields>
                 <asp:BoundField DataField="Name" HeaderText="Username:" SortExpression="Name" />
                 <asp:BoundField DataField="Role" HeaderText="Role:" SortExpression="Role" />
             </Fields>
-            <FooterStyle BackColor="#C6C3C6" ForeColor="Black" />
-            <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#E7E7FF" />
-            <PagerStyle BackColor="#C6C3C6" ForeColor="Black" HorizontalAlign="Right" />
-            <RowStyle BackColor="#DEDFDE" ForeColor="Black" />
+            <FooterStyle BackColor="#333333" ForeColor="#333333" BorderStyle="None" />
+            <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="#333333" BorderStyle="None" />
+            <InsertRowStyle BorderStyle="None" />
+            <PagerStyle BackColor="#333333" ForeColor="#333333" HorizontalAlign="Right" />
+            <RowStyle BackColor="#333333" ForeColor="White" />
         </asp:DetailsView></li>
             <li><asp:Button ID="HomePageButton1" runat="server" Text="Home" PostBackUrl="~/Default.aspx" CssClass="button" /></li>             
-            <li><asp:Button ID="controlPanelBtn" runat="server" Text="Control Panel" PostBackUrl="~/UserControlPanel.aspx" CssClass="button" /></li>             
-            <li><asp:Button ID="UploadMapButton" runat="server" Text="Upload Map" PostBackUrl="~/UploadMap.aspx" CssClass="button" /></li>      
+            <li></li>             
+            <li><asp:Button ID="UploadMapButton" runat="server" Text="Upload Map" PostBackUrl="~/UploadMap.aspx" CssClass="button" Visible="False" /></li>      
             <li><asp:Button ID="ViewMaps" runat="server" Text="Browse Maps" PostBackUrl="~/ViewMapUser.aspx" CssClass="button" /></li>
-        <li><asp:Button ID="LogInButton" runat="server" Text="Log in" PostBackUrl="~/UserLogin.aspx" ValidationGroup="master" CssClass="button"/></li>             
-        <li><asp:Button ID="SignOutButton" runat="server" Text="Sign Out" OnClick="SignOutButton_Click" Visible="False" ValidationGroup="master" CssClass="button"/></li>
+            <li><asp:Button ID="SignUpButton" runat="server" Text="Sign Up" PostBackUrl="~/AddUser.aspx" CssClass="button" /></li>
+            <li><asp:Button ID="LogInButton" runat="server" Text="Log in" PostBackUrl="~/UserLogin.aspx" ValidationGroup="master" CssClass="button"/></li>             
+            <li><asp:Button ID="SignOutButton" runat="server" Text="Sign Out" OnClick="SignOutButton_Click" Visible="False" ValidationGroup="master" CssClass="button"/></li>
+            <li><asp:Button ID="AddUserButton" runat="server" Text="Add User" CssClass="button" PostBackUrl="~/AddUser.aspx" Visible="False" /></li>
+         <li><asp:Button ID="controlPanelBtn" runat="server" Text="Admin Control Panel" PostBackUrl="~/UserControlPanel.aspx" CssClass="button" /></li>
          </ul> 
-<!-- Testing to see if we really need the table-->
-         
-    <table class="content_actual">
-            <tr>
-                <td>
-                  <!--  <asp:Button ID="HomePageButton" runat="server" PostBackUrl="~/Default.aspx" Text="Home" ValidationGroup="master" CssClass="button" /> -->
-                </td>
-                <td>
-              
-                </td>
-                <td>
-                  <!--  <asp:Button ID="Upload" runat="server" PostBackUrl="~/UploadMap.aspx" Text="Upload a Image" ValidationGroup="master" CssClass="button" /> -->
-                </td> 
-               <!-- <td class="auto-style3"></td>
-                <td class="auto-style3"></td> -->
-               <!-- <td class="auto-style4">&nbsp;</td>
-                <td class="auto-style3">&nbsp;</td> -->
-            </tr>
-            </table> 
+
         <br />
     </div>   
     <div class="Content">
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
-     </div>
+    </div>
+    <br />
+    <br />
     <div id ="footer">
-        <table class="auto-style2">
+        <table class="footerTable">
             <tr class="tdHead">
-                <td >Minecraft Map Archive</td>
-                <td>Social Media</td>
-                <td>Support</td>
+                <td class="tdHead">Minecraft Map Archive</td>
+                <td class="tdHead">Social Media</td>
+                <td class="tdHead">Support</td>
             </tr>
             <tr>
                 <td class="footerImage" rowspan ="3"></td>
-                <td><a href="https://discord.com/">Discord</a></td>
-                <td rowspan ="3"><a href = "mailto: support@example.com">Send Email</a></td>
+                <td class="footerLink" ><a href="https://discord.com/">Discord</a></td>
+                <td class="footerLink"  rowspan ="3"><a href = "mailto: support@example.com">Send Email</a></td>
             </tr>
             <tr>
-                <td class="auto-style3"><a href="https://twitter.com/minecraft">Twitter</a></td>
+                <td class="footerLink" ><a href="https://twitter.com/minecraft">Twitter</a></td>
             </tr>
             <tr>
-                <td><a href="https://twitter.com/minecraft">Facebook</a></td>
+                <td class="footerLink" ><a href="https://twitter.com/minecraft">Facebook</a></td>
             </tr>
         </table>
         

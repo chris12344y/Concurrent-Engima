@@ -30,13 +30,19 @@ namespace GroupProjectV4
                         UserNameTxtBox.Text = uName;
                         DetailsView1.Visible = true;
                         SignOutButton.Visible = true;
+                        UploadMapButton.Visible = true;
+
                         LogInButton.Visible = false;
+                        SignUpButton.Visible = false;
                     }
                     else
                     {
                         UserNameTxtBox.Text = null;
                         LogInButton.Visible = true;
+                        SignUpButton.Visible = true;
+
                         SignOutButton.Visible = false;
+                        UploadMapButton.Visible = false;
                     }
                 }
 
@@ -56,16 +62,17 @@ namespace GroupProjectV4
             con.Open();
             role = Convert.ToString(cmd.ExecuteScalar());
             con.Close();
-            if (role != "")
+
+            if(role == "Admin")
             {
-                TextBox1.Text = role;
+                controlPanelBtn.Visible = true;
+                AddUserButton.Visible = true;
             }
             else
             {
-                TextBox1.Visible = false;
                 controlPanelBtn.Visible = false;
+                AddUserButton.Visible = false;
             }
-
         }
 
         protected void SignOutButton_Click(object sender, EventArgs e)
