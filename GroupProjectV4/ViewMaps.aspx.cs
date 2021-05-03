@@ -27,12 +27,12 @@ namespace GroupProjectV4
         {
             if (!IsPostBack)
             {
-                string[] filePaths = Directory.GetFiles(Server.MapPath("~/Maps"));
+                string[] filePaths = Directory.GetFiles(Server.MapPath("Maps"));
                 List<ListItem> file = new List<ListItem>();
                 foreach (string filePath in filePaths)
                 {
                     string fileName = Path.GetFileName(filePath);
-                    file.Add(new ListItem(fileName, "~/Maps/" + fileName));
+                    file.Add(new ListItem(fileName, "Maps/" + fileName));
                 }
                 GridView1.DataSource = file;
                 GridView1.DataBind();
@@ -42,7 +42,7 @@ namespace GroupProjectV4
 
                 //files is datasource for gridView1 here
                 List<ListItem> files = new List<ListItem>();
-                string path = Server.MapPath("~/Maps/");
+                string path = Server.MapPath("Maps/");
 
                 //iterate through all directories in the /Maps/ folder
                 string[] mapPaths = Directory.GetDirectories(path);
@@ -70,7 +70,7 @@ namespace GroupProjectV4
 
         protected void DownloadFile(object sender, EventArgs e)
         {
-            string filePath = (sender as LinkButton).CommandArgument;
+            string filePath = (sender as ImageButton).CommandArgument;
             Response.ContentType = ContentType;
             Response.AppendHeader("Content-Disposition", "attachment; filename=" + Path.GetFileName(filePath));
             Response.WriteFile(filePath);
@@ -80,7 +80,7 @@ namespace GroupProjectV4
         protected void DeleteFile(object sender, EventArgs e)
         {
            
-            string filePath = (sender as LinkButton).CommandArgument;
+            string filePath = (sender as ImageButton).CommandArgument;
             File.Delete(filePath);
             Response.Redirect(Request.Url.AbsoluteUri);
         }

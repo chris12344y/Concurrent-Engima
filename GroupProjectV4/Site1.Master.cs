@@ -9,8 +9,6 @@ using System.Web.Configuration;
 namespace GroupProjectV4
 {
     //TODO: ensure only admins can sign in
-    //I don't know how to actually figure out if a user has role "Admin" or not.
-    //Might need Christian to do this with his database wizardry
     public partial class Site1 : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
@@ -46,7 +44,14 @@ namespace GroupProjectV4
                     }
                 }
 
-                catch { }
+                catch {
+                    UserNameTxtBox.Text = null;
+                    LogInButton.Visible = true;
+                    SignUpButton.Visible = true;
+
+                    SignOutButton.Visible = false;
+                    UploadMapButton.Visible = false;
+                }
             }
             string role = "";
             // get SQL Connection String

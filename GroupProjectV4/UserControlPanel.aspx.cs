@@ -8,9 +8,6 @@ using System.Web.Security;
 
 namespace GroupProjectV4
 {
-    //TODO:
-    //delete user files from control panel
-    //https://www.c-sharpcorner.com/UploadFile/99bb20/get-the-list-of-all-files-from-server-directory-in-Asp-Net/
     public partial class UserControlPanel : System.Web.UI.Page
     {
         string getUser()
@@ -23,12 +20,11 @@ namespace GroupProjectV4
                 return ticket.Name;
             }
             else return null;
-
         }
         string GetRole(string user)
         {
             string role = "";
-            //check if user is null, and return if yeet.
+            //check if user is null, and return
             if (user == null)
             {
                 return null;
@@ -54,7 +50,6 @@ namespace GroupProjectV4
 
         protected void Page_Load(object sender, EventArgs e)
         {
-           
             // Check for Authentication Cookie
             string user = getUser();
             string role = GetRole(user);

@@ -83,7 +83,6 @@ namespace GroupProjectV4
                 con.Close();
 
                 // Show messages
-                //make buttons invisible
                 createdMsg.Visible = true;
                 createdButton.Visible = true;
                 ErrorLabel.Visible = false;
