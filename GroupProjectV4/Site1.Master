@@ -22,8 +22,7 @@
         .tdHead{
             font-size: 20px;
             color: white;
-            text-shadow: 1px 1px 20px black;
-
+            text-shadow: 2px 2px 4px black;
         }
         .auto-style3 {
             height: 22px;
@@ -87,7 +86,7 @@
         
         </asp:ContentPlaceHolder>
     </div>
-    <div id ="footer">
+    <div id ="footer" class="footer">
         <table class="auto-style2">
             <tr class="tdHead">
                 <td >Minecraft Map Archive</td>
