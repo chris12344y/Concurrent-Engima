@@ -142,6 +142,18 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="AddUser.aspx" />
+    <Content Include="App_Data\dbo.AddUser.sql" />
+    <Content Include="App_Data\dbo.GetRole.sql" />
+    <Content Include="App_Data\dbo.Table.sql" />
+    <Content Include="App_Data\dbo.ValidateUser.sql" />
+    <Content Include="App_Data\MapDataBase.mdf" />
+    <Content Include="App_Data\MapDataBase_Log.ldf">
+      <DependentUpon>MapDataBase.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Data\UsersDataBase.mdf" />
+    <Content Include="App_Data\UsersDataBase_Log.ldf">
+      <DependentUpon>UsersDataBase.mdf</DependentUpon>
+    </Content>
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -154,6 +166,19 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Page_Wallpapers\grass_2.jpg" />
+    <Content Include="Page_Wallpapers\header_background.png" />
+    <Content Include="Page_Wallpapers\map-texture.png" />
+    <Content Include="Page_Wallpapers\mapbigger-header-cantidate.png" />
+    <Content Include="Page_Wallpapers\Minecraft-background-forestbyOcean.jpg" />
+    <Content Include="Page_Wallpapers\Minecraft-logo-mojang-small.png" />
+    <Content Include="Page_Wallpapers\Minecraft-logo-mojang-small2.png" />
+    <Content Include="Page_Wallpapers\Minecraft-logo-mojang.png" />
+    <Content Include="Page_Wallpapers\minecraft_icon.png" />
+    <Content Include="Page_Wallpapers\Minecraft_Logo.jpg" />
+    <Content Include="Page_Wallpapers\Minecraft_world_picture.png" />
+    <Content Include="Page_Wallpapers\Mountain-by-the-sea.jpg" />
+    <Content Include="Page_Wallpapers\widget.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -364,12 +389,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
     <Folder Include="Images\" />
     <Folder Include="Maps\" />
     <Folder Include="Models\" />
-    <Folder Include="Page_Wallpapers\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -33,15 +33,6 @@ namespace GroupProjectV4
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// TextBox1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
-
-        /// <summary>
         /// UserNameTxtBox control.
         /// </summary>
         /// <remarks>
@@ -87,6 +78,33 @@ namespace GroupProjectV4
         protected global::System.Web.UI.WebControls.DetailsView DetailsView1;
 
         /// <summary>
+        /// HomePageButton1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button HomePageButton1;
+
+        /// <summary>
+        /// controlPanelBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button controlPanelBtn;
+
+        /// <summary>
+        /// UploadMapButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button UploadMapButton;
+
+        /// <summary>
         /// LogInButton control.
         /// </summary>
         /// <remarks>
@@ -103,33 +121,6 @@ namespace GroupProjectV4
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button SignOutButton;
-
-        /// <summary>
-        /// HomePageButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button HomePageButton;
-
-        /// <summary>
-        /// ControlPanelButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ControlPanelButton;
-
-        /// <summary>
-        /// Upload control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Upload;
 
         /// <summary>
         /// ContentPlaceHolder1 control.

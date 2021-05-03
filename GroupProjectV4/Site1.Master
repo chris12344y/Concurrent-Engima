@@ -8,6 +8,33 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <link rel="stylesheet" type="text/css" href="/CSS-Sheets/Style-master.css" media="screen" />
+    <style type="text/css" style="width: 10%; height: 10%">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            width: 100%;
+            display:inline-block;
+            background-image: url('Page_Wallpapers/grass_2.jpg') !important;
+            background-repeat: no-repeat !important;
+            background-size: 100% 100% !important;
+        }
+        .tdHead{
+            font-size: 20px;
+            color: white;
+            text-shadow: 1px 1px 20px black;
+
+        }
+        .auto-style3 {
+            height: 22px;
+        }
+        .footerImage {
+            background-image: url('Page_Wallpapers/Minecraft-logo-mojang-small2.png') !important;
+            background-repeat: no-repeat;
+            width: 150px;
+            height: 164px;
+        }
+    </style>
 </head>
 <body> 
     <form id="form1" runat="server">
@@ -16,7 +43,6 @@
             <img src="./Page_Wallpapers/mapbigger-header-cantidate.png" alt="maphead" draggable="auto" id="titlepic" />
                 <h1 id="webtitle">Minecraft Map Archive</h1>
         </div>
-        <asp:TextBox ID="TextBox1" runat="server" Visible="false"></asp:TextBox>
           <br />
             <asp:TextBox ID="UserNameTxtBox" runat="server" Width="110px" Visible="false" Height="28px"></asp:TextBox>
             <asp:SqlDataSource ID="NameRoleDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:UserConnectionString %>" SelectCommand="SELECT [Name], [Role] FROM [Users] WHERE ([Email] = @Email)">
@@ -31,42 +57,29 @@
         </asp:SqlDataSource>
         <asp:SqlDataSource ID="RoleDataSource" runat="server"></asp:SqlDataSource>
     <ul id="nav" class="auto-style1">
-        <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" BackColor="White" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px" CellPadding="3" CellSpacing="1" DataSourceID="NameRoleDataSource" GridLines="None" Height="50px" Width="125px" Visible="False">
-            <EditRowStyle BackColor="#9471DE" Font-Bold="True" ForeColor="White" />
+        <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" BackColor="#333333" BorderColor="#333333" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="NameRoleDataSource" Height="50px" Width="125px" Visible="False">
+            <EditRowStyle BackColor="#333333" Font-Bold="True" ForeColor="#FFFFFF" />
             <Fields>
                 <asp:BoundField DataField="Name" HeaderText="Username:" SortExpression="Name" />
                 <asp:BoundField DataField="Role" HeaderText="Role:" SortExpression="Role" />
             </Fields>
-            <FooterStyle BackColor="#C6C3C6" ForeColor="Black" />
-            <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#E7E7FF" />
-            <PagerStyle BackColor="#C6C3C6" ForeColor="Black" HorizontalAlign="Right" />
-            <RowStyle BackColor="#DEDFDE" ForeColor="Black" />
+            <FooterStyle BackColor="#333333" ForeColor="#FFFFFF" />
+            <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="#FFFFFF" />
+            <PagerStyle BackColor="#333333" ForeColor="#FFFFFF" HorizontalAlign="Left" />
+            <RowStyle BackColor="#333333" ForeColor="#FFFFFF" />
         </asp:DetailsView>
-            <li><a href="Default.aspx">Home</a></li>
-            <li><a href="UserControlPanel.aspx">Control Panel</a></li>
-            <li><a href="UploadMap.aspx">Upload A Map</a></li>
-            <li><asp:Button ID="LogInButton" runat="server" PostBackUrl="~/UserLogin.aspx" Text="Log in" ValidationGroup="master" CssClass="button" Height="49px" Width="131px" /> &nbsp;</li>
-            <li><asp:Button ID="SignOutButton" runat="server" OnClick="SignOutButton_Click" Text="Sign Out" Visible="False" ValidationGroup="master" CssClass="button" Height="47px" Width="142px"/>&nbsp;</li>
+            <li>
+                <asp:Button ID="HomePageButton1" runat="server" Text="Home" PostBackUrl="~/Default.aspx" CssClass="button" /></li>
+            <li>
+                <asp:Button ID="controlPanelBtn" runat="server" Text="Control Panel" PostBackUrl="~/UserControlPanel.aspx" CssClass="button" /></li>
+            <li>
+                <asp:Button ID="UploadMapButton" runat="server" Text="Upload Map" PostBackUrl="~/UploadMap.aspx" CssClass="button" /></li>
+            <li>
+                <asp:Button ID="LogInButton" runat="server" Text="Log in" PostBackUrl="~/UserLogin.aspx" ValidationGroup="master" CssClass="button"/></li>
+            <li>
+                <asp:Button ID="SignOutButton" runat="server" Text="Sign Out" OnClick="SignOutButton_Click" Visible="False" ValidationGroup="master" CssClass="button"/></li>
          </ul> 
 <!-- Testing to see if we really need the table-->
-         
-    <table class="content_actual">
-            <tr>
-                <td>
-                  <!--  <asp:Button ID="HomePageButton" runat="server" PostBackUrl="~/Default.aspx" Text="Home" ValidationGroup="master" CssClass="button" /> -->
-                </td>
-                <td>
-                   <!-- <asp:Button ID="ControlPanelButton" runat="server" PostBackUrl="~/UserControlPanel.aspx" Text="Admin Control Panel" ValidationGroup="master" CssClass="button" /> -->
-                </td>
-                <td>
-                  <!--  <asp:Button ID="Upload" runat="server" PostBackUrl="~/UploadMap.aspx" Text="Upload a Image" ValidationGroup="master" CssClass="button" /> -->
-                </td> 
-               <!-- <td class="auto-style3"></td>
-                <td class="auto-style3"></td> -->
-               <!-- <td class="auto-style4">&nbsp;</td>
-                <td class="auto-style3">&nbsp;</td> -->
-            </tr>
-            </table> 
         <br />
     </div>   
     <div class="Content">
@@ -74,8 +87,27 @@
         
         </asp:ContentPlaceHolder>
     </div>
-        <p>
-            &nbsp;</p>
+    <div id ="footer">
+        <table class="auto-style2">
+            <tr class="tdHead">
+                <td >Minecraft Map Archive</td>
+                <td>Social Media</td>
+                <td>Support</td>
+            </tr>
+            <tr>
+                <td class="footerImage" rowspan ="3"></td>
+                <td><a href="https://discord.com/">Discord</a></td>
+                <td rowspan ="3"><a href = "mailto: support@example.com">Send Email</a></td>
+            </tr>
+            <tr>
+                <td class="auto-style3"><a href="https://twitter.com/">Twitter</a></td>
+            </tr>
+            <tr>
+                <td><a href="https://www.facebook.com/">Facebook</a></td>
+            </tr>
+        </table>
+        
+    </div>
     </form>
     
         
