@@ -28,19 +28,14 @@
                     <asp:Label id="mapUploadResult" Runat="server" ForeColor="#CC3300"></asp:Label>
                  </div>
             </td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            
-            <td>&nbsp;</td>
+   
         </tr>
         <tr>
             <td>
                 <asp:Button ID="UploadButton" type="submit" runat="server" Text="Upload" OnClick="UploadButton_Click" CssClass="button" />
             </td>
-            <td>
-                &nbsp;</td>
-            <td>&nbsp;</td>
+            
+            
         </tr>
     </table>
         </div>

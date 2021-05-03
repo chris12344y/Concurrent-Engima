@@ -1,23 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Web;
-using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace GroupProjectV4
 {
-    public partial class ViewMaps : System.Web.UI.Page
+    public partial class ViewMapUser : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             GenerateDownloadLinks();
-            
+
         }
 
         //General format for generation of download links
@@ -34,8 +30,8 @@ namespace GroupProjectV4
                     string fileName = Path.GetFileName(filePath);
                     file.Add(new ListItem(fileName, "~/Maps/" + fileName));
                 }
-                GridView1.DataSource = file;
-                GridView1.DataBind();
+                GridView2.DataSource = file;
+                GridView2.DataBind();
             }
             else
             {
@@ -47,7 +43,7 @@ namespace GroupProjectV4
                 //iterate through all directories in the /Maps/ folder
                 string[] mapPaths = Directory.GetDirectories(path);
                 foreach (string mapPath in mapPaths)    //This loop runs once per directory, so this is a great place to add corresponding HTML? idk how to do that though.
-                                                         // I think you can add javascript to auto-update html? Though i feel like there's an easier way.
+                                                        // I think you can add javascript to auto-update html? Though i feel like there's an easier way.
                 {
                     //get all files in the current directory.
                     string[] filePaths = Directory.GetFiles(mapPath);
@@ -59,31 +55,22 @@ namespace GroupProjectV4
                         files.Add(new ListItem(Path.GetFileName(filePath), filePath));
                     }
                     //bind & display
-                    GridView1.DataSource = files;
-                    GridView1.DataBind();
+                    GridView2.DataSource = files;
+                    GridView2.DataBind();
                 }
             }
         }
- 
-        
-            
+
+
+
 
         protected void DownloadFile(object sender, EventArgs e)
         {
-            string filePath = (sender as LinkButton).CommandArgument;
+            string filePath = (sender as ImageButton).CommandArgument;
             Response.ContentType = ContentType;
             Response.AppendHeader("Content-Disposition", "attachment; filename=" + Path.GetFileName(filePath));
             Response.WriteFile(filePath);
             Response.End();
         }
-
-        protected void DeleteFile(object sender, EventArgs e)
-        {
-           
-            string filePath = (sender as LinkButton).CommandArgument;
-            File.Delete(filePath);
-            Response.Redirect(Request.Url.AbsoluteUri);
-        }
-
     }
 }
