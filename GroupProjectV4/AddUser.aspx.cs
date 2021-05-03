@@ -3,6 +3,7 @@ using System.Data;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Text.RegularExpressions;
+using System.Web.Security;
 
 namespace GroupProjectV4
 {
@@ -10,7 +11,42 @@ namespace GroupProjectV4
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            // Check for Authentication Cookie
+            FormsAuthenticationTicket ticket;
+            string uName = "";
+            if (Request.Cookies[FormsAuthentication.FormsCookieName] != null)
+            {
+                try
+                {
+                    ticket = FormsAuthentication.Decrypt(Request.Cookies[FormsAuthentication.FormsCookieName].Value);
 
+                    if (ticket.Name != "")
+                    {
+                        uName = ticket.Name;
+                    }
+                }
+
+                catch { }
+            }
+            string role = "";
+            // get SQL Connection String
+            string constr = ConfigurationManager.ConnectionStrings["UserConnectionString"].ConnectionString;
+            // Set up SQL Query
+            SqlConnection con = new SqlConnection(constr);
+            SqlCommand cmd = new SqlCommand("GetRole");
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@name", uName);
+            cmd.Connection = con;
+
+            // Execute SQL Query
+            con.Open();
+            role = Convert.ToString(cmd.ExecuteScalar());
+            con.Close();
+            if (role == "Admin")
+            {
+                RoleLbl.Visible = true;
+                RolesList.Visible = true;
+            }
         }
         bool IsValidEmail(string str)
         {
@@ -63,6 +99,11 @@ namespace GroupProjectV4
         protected void createdButton_Click(object sender, EventArgs e)
         {
             Response.Redirect("Default.aspx");
+        }
+
+        protected void RolesList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

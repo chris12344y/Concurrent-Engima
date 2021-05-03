@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Web;
+using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -14,6 +17,7 @@ namespace GroupProjectV4
         protected void Page_Load(object sender, EventArgs e)
         {
             GenerateDownloadLinks();
+            
         }
 
         //General format for generation of download links
@@ -60,7 +64,9 @@ namespace GroupProjectV4
                 }
             }
         }
-
+ 
+        
+            
 
         protected void DownloadFile(object sender, EventArgs e)
         {
@@ -73,6 +79,7 @@ namespace GroupProjectV4
 
         protected void DeleteFile(object sender, EventArgs e)
         {
+           
             string filePath = (sender as LinkButton).CommandArgument;
             File.Delete(filePath);
             Response.Redirect(Request.Url.AbsoluteUri);

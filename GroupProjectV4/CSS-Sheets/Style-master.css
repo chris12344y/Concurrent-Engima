@@ -7,43 +7,32 @@
 #headerContent {
     position: sticky;
     color: #333;
-    font-family: monospace;
-    
-
-   
-    
+    font-family: monospace; 
 }
 
 #headerContent h1 {
-    font-size: 27px;
-    font-family: 'Wingdings 3';
-    color: darkslateblue;
-    position: absolute;
-    bottom:86px;
-    left: 100px;
-    background-repeat: no-repeat;
-    background-position: center; 
-    padding-left: 20px;
-    padding-right: 22px;
-    z-index:2;
-} 
-    
-/*#imagetext h1 {
-  
+      font-size: 27px;
     font-family: monospace;
-    color: red;
+    color: darkslateblue;
     position: relative;
-    bottom: 10px;
-    right: 10px;
-    float:left;
-    background-color: black;
-    color: white;
-    padding-left: 20px;
-    padding-right: 20px;
-} */
+    /* bottom: 86vw; */
+    /* left: 114px; */
+    top: -44px;
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    /* padding-left: 20px; */
+    /* padding-right: 22px; */
+    z-index: 2;
+    Anc: visible;
+    margin: auto;
+    /* transform: translate(122px, -44px); */
+    padding-left: 115px;
+}
+    
 
 #titlepic {
     position: relative;
+    margin: auto;
     top: 20px;
     left:100px;
     z-index:1;
@@ -61,7 +50,6 @@
 .button {
     background-color: #333;
     border: none;
-    padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline;
@@ -72,15 +60,12 @@
     float: left;
     height: auto;
     width: auto;
-    /*
-    background-image: url(../Page_Wallpapers/mapbigger-header-cantidate.png);
-    background-size: 50px;
-    background-repeat: no-repeat;
-    background-position: center; */
+    padding-top: 3%;
 }
 
  .button:hover {
-        color: #111;
+        color: #A7DBD5;
+        font-size: 18px;
  }
 
 
@@ -93,42 +78,47 @@
     color: white;
     text-align: center;
     font-family:monospace;
+   
 }
 
 #nav {
     list-style-type: none;
-    margin: 0;
+    position: relative;
+    margin: auto;
     overflow: hidden;
     background-color: #333;
     font-size: 16px;
-    font-family:monospace;
-    z-index:0;
-   
-    
- 
-    
+    font-family: monospace;
+    z-index: 0;
 }
 
 #nav li {
     float: left;
     height:auto;
     width:auto;
+    position: relative;
+   margin:auto;
 }
 
 #nav li a {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 16px 16px;
     text-decoration: none;
     font-size: 16px;
     font-family:monospace;
+    transition-duration: 0.4s;
    /* height:auto;
     width:auto; */
+   position: relative;
+   margin:auto;
 }
 
 #nav li a:hover {
-    background-color: #111;
+    
+    color: #A7DBD5;
+    font-size: 18px;
 }
 
 #DetailsView1 {
@@ -147,10 +137,13 @@
 }
 
 .content_background {
-    z-index:0;
-    position:absolute;
-    right:550px;
-    width:900px;
+    z-index: 0;
+    position: relative;
+    width: 40vw;
+    margin-left: auto;
+    margin-right:auto;
+    width:50%;
+    display: block;
 }
 
 #content_actual {
@@ -159,11 +152,15 @@
 
 .content_actual table {
     z-index: 1;
-    color:dimgrey;
-    position: absolute;
-    bottom: 500px;
-    right: 750px;
-    top: 300px;
+    color: dimgrey;
+    position: relative;
+    /* margin-left: auto; */
+    margin-right: auto;
+    /* width: 50%; */
+    display: table;
+    margin: auto;
+    top: -30vw;
+    left: 3vw;
 }
 
 .content_actual label
@@ -185,8 +182,12 @@ span#ContentPlaceHolder1_mapNameTakenLabel {
 }
 
 input#ContentPlaceHolder1_UploadButton {
-    position: absolute;
-    left: 70px;
+    position: relative;
+    left: 29%;
+    bottom: 20%;
+    background-color: black;
+    padding: 3%;
+    margin: auto;
 }
 
 span#ContentPlaceHolder1_MapFileValidator {
@@ -194,6 +195,47 @@ span#ContentPlaceHolder1_MapFileValidator {
     right: 75px;
 }
 
+
+
+input#ContentPlaceHolder1_mapFile {
+    color: black;
+    position: relative;
+}
 /*Section End: Upload Map*/
 
+/*Section Start: Login Page*/
+
+
+table#ContentPlaceHolder1_Login1 {
+    /* position: fixed; */
+    /* right: 650px; */
+    position: relative;
+    margin: auto;
+}
+/*Section End: Login*/
+/*Section Start: AddUser*/
+
+div#AddUserTable Table {
+    position: relative;
+    margin: auto;
+}
+
+/*Section End AddUser*/
+/*Section Start View Maps*/
+
+.content_actual_table {
+    margin:auto;
+    position:relative;
+}
+
+table#ContentPlaceHolder1_GridView1 {
+    position: relative;
+    left: 36%;
+}
+
+input#ContentPlaceHolder1_Maps {
+    padding: 1%;
+    position: relative;
+    left: 41%;
+}
 

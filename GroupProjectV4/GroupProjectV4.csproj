@@ -142,6 +142,10 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="AddUser.aspx" />
+    <Content Include="App_Data\MapDataBase.mdf" />
+    <Content Include="App_Data\MapDataBase_Log.ldf">
+      <DependentUpon>MapDataBase.mdf</DependentUpon>
+    </Content>
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -180,6 +184,7 @@
     <Content Include="UploadMap.aspx" />
     <Content Include="UserControlPanel.aspx" />
     <Content Include="UserLogin.aspx" />
+    <Content Include="ViewMapUser.aspx" />
     <None Include="Scripts\jquery-3.6.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.6.0.js" />
     <Content Include="Scripts\jquery-3.6.0.min.js" />
@@ -362,9 +367,15 @@
     <Compile Include="UserLogin.aspx.designer.cs">
       <DependentUpon>UserLogin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ViewMapUser.aspx.cs">
+      <DependentUpon>ViewMapUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewMapUser.aspx.designer.cs">
+      <DependentUpon>ViewMapUser.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
     <Folder Include="Images\" />
     <Folder Include="Maps\" />
