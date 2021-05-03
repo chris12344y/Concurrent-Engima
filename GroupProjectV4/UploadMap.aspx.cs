@@ -21,7 +21,7 @@ namespace GroupProjectV4
             string strFileName;
             string strFilePath;
             string strMapFolder;
-            string metaData = "";
+            
             strMapFolder = Server.MapPath("~/Maps/");
             // Retrieve the name of the file that is posted.
             strFilePath = strMapFolder + "/" + MapNameTxtBox.Text ;
