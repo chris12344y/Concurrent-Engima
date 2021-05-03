@@ -11,7 +11,8 @@
         <asp:ImageField DataImageUrlField="Value" ControlStyle-Height="300" ControlStyle-Width="300" />
         <asp:TemplateField>
             <ItemTemplate>
-                <asp:LinkButton ID="lnkDownload" Text = "Download" CommandArgument = '<%# Eval("Value") %>' runat="server" OnClick = "DownloadFile"></asp:LinkButton>
+                                <asp:ImageButton ID="ImageButton1" CommandArgument ='<%# Eval("Value") %>' runat="server" onClick ="DownloadFile" ImageUrl="/Images/Picture1.png"></asp:ImageButton>
+
             </ItemTemplate>
         </asp:TemplateField>
         

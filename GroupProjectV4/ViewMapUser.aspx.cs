@@ -66,7 +66,7 @@ namespace GroupProjectV4
 
         protected void DownloadFile(object sender, EventArgs e)
         {
-            string filePath = (sender as LinkButton).CommandArgument;
+            string filePath = (sender as ImageButton).CommandArgument;
             Response.ContentType = ContentType;
             Response.AppendHeader("Content-Disposition", "attachment; filename=" + Path.GetFileName(filePath));
             Response.WriteFile(filePath);

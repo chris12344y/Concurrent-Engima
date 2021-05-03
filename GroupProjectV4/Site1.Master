@@ -45,9 +45,9 @@
             <li><a href="Default.aspx">Home</a></li>
             <li><a href="UserControlPanel.aspx">Control Panel</a></li>
             <li><a href="UploadMap.aspx">Upload A Map</a></li>
-            <li><asp:Button ID="ViewMaps" runat="server" PostBackUrl="~/ViewMapUser.aspx" Text="Browse Maps" Visible="True" ValidationGroup="master" CssClass="button" Height="47px" Width="142px"/>&nbsp;</li>
-            <li><asp:Button ID="LogInButton" runat="server" PostBackUrl="~/UserLogin.aspx" Text="Log in" ValidationGroup="master" CssClass="button" Height="49px" Width="131px" /> &nbsp;</li>
-            <li><asp:Button ID="SignOutButton" runat="server" OnClick="SignOutButton_Click" Text="Sign Out" Visible="False" ValidationGroup="master" CssClass="button" Height="47px" Width="142px"/>&nbsp;</li>
+            <li><asp:Button ID="ViewMaps" runat="server" PostBackUrl="~/ViewMapUser.aspx" Text="Browse Maps" Visible="True" ValidationGroup="master" CssClass="button" Height="47px" Width="142px"/></li>
+            <li><asp:Button ID="LogInButton" runat="server" PostBackUrl="~/UserLogin.aspx" Text="Log in" ValidationGroup="master" CssClass="button" Height="49px" Width="131px" /></li>
+            <li><asp:Button ID="SignOutButton" runat="server" OnClick="SignOutButton_Click" Text="Sign Out" Visible="False" ValidationGroup="master" CssClass="button" Height="47px" Width="142px"/></li>
 
          </ul> 
 <!-- Testing to see if we really need the table-->
@@ -79,8 +79,6 @@
         <p>
             &nbsp;</p>
     </form>
-    <footer class="footer">
-        chlasssssssssssssssss
-    </footer>        
+    \      
 </body>
 </html>

@@ -182,8 +182,12 @@ span#ContentPlaceHolder1_mapNameTakenLabel {
 }
 
 input#ContentPlaceHolder1_UploadButton {
-    position: absolute;
-    left: 70px;
+    position: relative;
+    left: 29%;
+    bottom: 20%;
+    background-color: black;
+    padding: 3%;
+    margin: auto;
 }
 
 span#ContentPlaceHolder1_MapFileValidator {
@@ -191,6 +195,12 @@ span#ContentPlaceHolder1_MapFileValidator {
     right: 75px;
 }
 
+
+
+input#ContentPlaceHolder1_mapFile {
+    color: black;
+    position: relative;
+}
 /*Section End: Upload Map*/
 
 /*Section Start: Login Page*/
